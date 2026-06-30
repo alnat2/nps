@@ -174,21 +174,26 @@ a {
   padding: 0;
 }
 
-.menu-icon {
+.menu-icon-animated {
   display: block;
   pointer-events: none;
 }
 
-.menu-icon-open {
-  display: none;
+.menu-icon-animated path {
+  transition: d 0.4s ease, opacity 0.4s ease;
 }
 
-.hamburger.is-open .menu-icon-closed {
-  display: none;
+.hamburger.is-open .top-line {
+  d: path("M24 1 L4.5 22");
 }
 
-.hamburger.is-open .menu-icon-open {
-  display: block;
+.hamburger.is-open .middle-line {
+  opacity: 0;
+  d: path("M12.5 14.2 L12.5 14.2");
+}
+
+.hamburger.is-open .bottom-line {
+  d: path("M29 24.5 L1 4.3");
 }
 
 .mobile-menu-overlay {
