@@ -2991,15 +2991,15 @@ a {
 }
 
 .section-link {
-  transition: filter 0.2s ease;
+  transition: color 0.2s ease;
 }
 .section-link:hover {
-  filter: brightness(1.3);
+  color: #ffc458;
 }
 
 .nav-link.highlight {
-  transition: filter 0.2s ease;
+  transition: color 0.2s ease;
 }
 .nav-link.highlight:hover {
-  filter: brightness(1.3);
+  color: #ffc458;
 }
