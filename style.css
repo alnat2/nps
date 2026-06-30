@@ -2971,3 +2971,21 @@ a {
     padding-right: 20px;
   }
 }
+
+/* --- Hover Animations --- */
+.case-btn {
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+.case-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.2);
+}
+
+.footer-nav a {
+  transition: transform 0.2s ease, filter 0.2s ease, color 0.2s ease;
+}
+.footer-nav a:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.2);
+  color: var(--text-primary);
+}
