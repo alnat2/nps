@@ -385,7 +385,7 @@ a {
 }
 
 .btn-primary:hover {
-  filter: brightness(1.1);
+  filter: brightness(1.3);
 }
 
 .btn-secondary {
@@ -2988,4 +2988,22 @@ a {
   transform: translateY(-2px);
   filter: brightness(1.2);
   color: var(--text-primary);
+}
+
+.section-link {
+  transition: transform 0.2s ease, filter 0.2s ease, color 0.2s ease;
+  display: inline-block;
+}
+.section-link:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.3);
+}
+
+.nav-link.highlight {
+  transition: transform 0.2s ease, filter 0.2s ease, color 0.2s ease;
+  display: inline-block;
+}
+.nav-link.highlight:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.3);
 }
