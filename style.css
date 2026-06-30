@@ -362,6 +362,11 @@ a {
   position: relative;
   overflow: hidden;
   border: none;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
 }
 
 .btn-primary {
@@ -379,6 +384,10 @@ a {
   pointer-events: none;
 }
 
+.btn-primary:hover {
+  filter: brightness(1.1);
+}
+
 .btn-secondary {
   background-color: var(--btn-bg-secondary);
   color: var(--accent-color);
@@ -393,6 +402,10 @@ a {
   border-radius: inherit;
   box-shadow: inset 1px 1px 1px 0px #5e4c3e, inset -1px -1px 1px 0px #3c2717;
   pointer-events: none;
+}
+
+.btn-secondary:hover {
+  filter: brightness(1.2);
 }
 
 .hero-avatar {
