@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UX/UI дизайнер портфолио - Александр Белоглазкин">
+    <title>Александр Белоглазкин - UX/UI Дизайнер</title>
+    <link rel="stylesheet" href="style.css?v=mobile-375-padding">
+</head>
+<body>
+    <header id="header" class="header-wrapper">
+        <div class="container top-nav">
+            <a href="#" class="logo">
+                <img src="assets/images/logo.svg" alt="АБ" class="logo-img">
+            </a>
+            
+            <nav class="actions-menu desktop-only">
+                <a href="#cases" class="nav-link nav-item">Кейсы</a>
+                <a href="#experience" class="nav-link nav-item">Опыт</a>
+                <a href="#skills" class="nav-link nav-item">Навыки</a>
+                <a href="assets/resume.pdf" class="nav-link highlight" target="_blank">Скачать резюме</a>
+            </nav>
+
+            <div class="contacts">
+                <a href="mailto:alex.beloglazkin@gmail.com" class="contact-item">
+                    <span class="contact-text">Почта</span>
+                    <img src="assets/images/mail.svg" alt="Mail" />
+                </a>
+                <a href="https://t.me/almat2" class="contact-item" target="_blank">
+                    <span class="contact-text">Телеграм</span>
+                    <img src="assets/images/telegram.svg" alt="Telegram" />
+                </a>
+            </div>
+
+            <button class="hamburger" aria-label="Открыть меню" aria-controls="mobile-menu" aria-expanded="false">
+                <img src="assets/images/menu.svg" alt="" class="menu-icon menu-icon-closed" aria-hidden="true">
+                <img src="assets/images/menu-open.svg" alt="" class="menu-icon menu-icon-open" aria-hidden="true">
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <nav class="mobile-nav">
+            <a href="#cases" class="nav-link">Кейсы</a>
+            <a href="#experience" class="nav-link">Опыт</a>
+            <a href="#skills" class="nav-link">Навыки</a>
+            <a href="assets/resume.pdf" class="nav-link highlight" target="_blank">Скачать резюме</a>
+        </nav>
+        <div class="mobile-menu-contacts">
+            <a href="mailto:alex.beloglazkin@gmail.com" class="mobile-menu-contact">
+                <span>Почта</span>
+                <img src="assets/images/mail.svg" alt="" aria-hidden="true">
+            </a>
+            <a href="https://t.me/almat2" class="mobile-menu-contact" target="_blank">
+                <span>Телеграм</span>
+                <img src="assets/images/telegram.svg" alt="" aria-hidden="true">
+            </a>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-bg">
+            <div class="hero-glowing-wrapper">
+                <img src="assets/images/glowing.svg" alt="" class="hero-glowing-img" />
+            </div>
+        </div>
+
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-headers">
+                    <div class="hero-titles">
+                        <p class="hero-subtitle">Александр Белоглазкин</p>
+                        <h1 class="hero-title">UX/UI дизайнер <br class="mobile-only">с опытом <br class="mobile-only">проектирования <br class="mobile-only">цифровых продуктов</h1>
+                    </div>
+                    <p class="hero-description">Веду проекты полного цикла от <br class="mobile-only">исследования<br class="desktop-only">до передачи в разработку.<br class="desktop-only"><br class="mobile-only">Сейчас в Оптима Сервис, фокус на <br class="mobile-only">дизайн-системе и UX.</p>
+                </div>
+                
+                <div class="hero-ctas">
+                    <button class="btn btn-primary">Смотреть работы</button>
+                    <button class="btn btn-secondary">Смотреть опыт</button>
+                </div>
+            </div>
+
+            <div class="hero-avatar">
+                <div class="hero-avatar-bg">
+                    <img src="assets/images/bg-circle.svg" alt="" />
+                </div>
+                <div class="hero-avatar-img">
+                    <img src="assets/images/person.png" alt="Александр Белоглазкин">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- CASES SECTION -->
+        <section id="cases" class="case-section section-padding">
+            <div class="section-header">
+                <h2 class="section-title"><span class="case-title-desktop">Избранные кейсы</span><span class="case-title-mobile">Опыт работы</span></h2>
+                <a href="#" class="section-link case-section-link-desktop">Все работы <span class="section-link-icon icon-circle-arrow-right" aria-hidden="true"></span></a>
+                <a href="assets/resume.pdf" class="section-link case-section-link-mobile" target="_blank">Резюме <span class="section-link-icon icon-download-circle" aria-hidden="true"></span></a>
+            </div>
+            <div class="cases-grid">
+                <!-- Case Card 1 -->
+                <article class="case-card">
+                    <img src="assets/images/case-card-bg.png" alt="Платформа для оптовых закупок цветов" class="case-bg case-bg-desktop">
+                    <img src="assets/images/case-card-bg-mobile.png" alt="Платформа для оптовых закупок цветов" class="case-bg case-bg-mobile">
+                    <div class="case-content">
+                        <div class="tags">
+                            <span class="tag">E-com</span>
+                            <span class="tag">Личный кабинет</span>
+                        </div>
+                        <div class="case-text">
+                            <h3>Платформа для оптовых <br>закупок цветов</h3>
+                            <p>Проектировал интерфейсные решения, участвовал в выборе и внедрении дизайн-системы, готовил макеты к реализации.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="case-btn">Подробнее <span class="case-btn-icon" aria-hidden="true"><img src="assets/images/arrow-right-double.svg" alt=""></span></a>
+                </article>
+                
+                <!-- Case Card 2 -->
+                <article class="case-card card-small">
+                    <img src="assets/images/case-card-bg.png" alt="Создание дизайн-системы для OptimaService" class="case-bg case-bg-desktop">
+                    <img src="assets/images/case-card-bg-mobile.png" alt="Создание дизайн-системы для OptimaService" class="case-bg case-bg-mobile">
+                    <div class="case-content">
+                        <div class="tags">
+                            <span class="tag">Retail</span>
+                            <span class="tag">Design system</span>
+                        </div>
+                        <div class="case-text">
+                            <h3>Создание дизайн-системы для OptimaService</h3>
+                            <p>Участвовал в проектировании и внедрении дизайн-системы онлайн-магазина дорожного оборудования.</p>
+                        </div>
+                    </div>
+                    <a href="#" class="case-btn">Подробнее <span class="case-btn-icon" aria-hidden="true"><img src="assets/images/arrow-right-double.svg" alt=""></span></a>
+                </article>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience" class="jobs-section section-padding">
+            <div class="section-header">
+                <h2 class="section-title">Опыт работы</h2>
+                <a href="assets/resume.pdf" class="section-link highlight" target="_blank"><span class="jobs-link-desktop">Скачать резюме</span><span class="jobs-link-mobile">Резюме</span> <span class="section-link-icon icon-download-circle" aria-hidden="true"></span></a>
+            </div>
+            <div class="timeline">
+                <!-- Job 1 -->
+                <div class="job-card">
+                    <div class="job-meta">
+                        <span class="job-date">апр 2024 — настоящее время</span>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="job-content">
+                        <span class="tag fancy">Оптима Сервис</span>
+                        <h3>UX/UI дизайнер</h3>
+                        <div class="job-desc">
+                            <strong>Позиция и проект</strong>
+                            <p>UX/UI дизайнер в онлайн-магазине. Работаю в команде дизайнеров: веду дизайн-систему, UX-аудит и проектирование адаптивных интерфейсов.</p>
+                            <strong>Результаты работы</strong>
+                            <ul>
+                                <li>Развил дизайн-систему до зрелого состояния. Новые разделы сайта, создание которых раньше занимало часы, теперь собираются за минуты.</li>
+                                <li>Провожу UX-аудит онлайн-магазина: выявляю точки отказа и устраняю проблемные сценарии, снижая отток пользователей.</li>
+                                <li>Проектирую адаптив под все устройства: мобайл, планшет, десктоп и широкоэкранный формат.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="job-card">
+                    <div class="job-meta">
+                        <span class="job-date">ноя 2023 — апр 2024</span>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="job-content">
+                        <span class="tag fancy">ФинПромоутСистемс</span>
+                        <h3>UX/UI дизайнер</h3>
+                        <div class="job-desc">
+                            <strong>О роли</strong>
+                            <p>Отвечал за весь дизайн на старте нового финансового маркетплейса. Работал в команде с разработчиками и продакт-менеджером. Самостоятельно выстраивал дизайн-процессы в проекте.</p>
+                            <strong>Результаты работы</strong>
+                            <ul>
+                                <li>Спроектировал адаптивные интерфейсы маркетплейса</li>
+                                <li>Совместно с разработчиками адаптировали шаблонную систему, где для добавления нового продукта достаточно заменить контент.</li>
+                                <li>Создал и внедрил UI-kit, что ускорило разработку фронтенд-части приблизительно на 20%.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="job-card">
+                    <div class="job-meta">
+                        <span class="job-date">мар 2021 — ноя 2023</span>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="job-content">
+                        <span class="tag fancy">X-lab</span>
+                        <h3>UX/UI дизайнер</h3>
+                        <div class="job-desc">
+                            <strong>Опыт в компании</strong>
+                            <p>Начинал работу в маркетинговом отделе: создавал лендинги под рекламные кампании. Позже занимался редизайном и развитием сайта СоБанк, параллельно участвовал в разработке портала для пилотного проекта по залоговому имуществу.</p>
+                            <strong>Результаты работы</strong>
+                            <ul>
+                                <li>Полный цикл проектирования: от прототипов до передачи в разработку.</li>
+                                <li>Сократил время создания лендингов для маркетингового отдела в 2 раза. Разработал UI-kit и стандартизировал процессы.</li>
+                                <li>Для сайта СоБанк переработал ключевые разделы и визуальную систему. Ускорился выпуск новых фич и сократилось количество ошибок на стороне разработки.</li>
+                                <li>Портал залогового имущества спроектирован с нуля: каталог объектов, личный кабинет и форма подачи заявки. Продукт дошёл до закрытого бета-запуска.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="skills-section section-padding">
+            <div class="section-header">
+                <h2 class="section-title"><span class="skills-title-desktop">Навыки и инструменты</span><span class="skills-title-mobile">Опыт работы</span></h2>
+                <a href="assets/resume.pdf" class="section-link skills-section-link-mobile" target="_blank">Резюме <span class="section-link-icon icon-download-circle" aria-hidden="true"></span></a>
+            </div>
+            <div class="skills-grid">
+                <!-- Skill 1 -->
+                <div class="skill-card">
+                    <span class="skill-card-shadow skill-card-shadow-multiply" aria-hidden="true"></span>
+                    <span class="skill-card-shadow skill-card-shadow-dodge" aria-hidden="true"></span>
+                    <img src="assets/images/skill-decor-1.png" alt="" class="skill-decor" aria-hidden="true">
+                    <h3>Проектирование</h3>
+                    <div class="tags">
+                        <span class="tag">Адаптивный дизайн</span>
+                        <span class="tag">Прототипирование</span>
+                        <span class="tag">ИИ-инструменты</span>
+                    </div>
+                </div>
+                <!-- Skill 2 -->
+                <div class="skill-card">
+                    <span class="skill-card-shadow skill-card-shadow-multiply" aria-hidden="true"></span>
+                    <span class="skill-card-shadow skill-card-shadow-dodge" aria-hidden="true"></span>
+                    <img src="assets/images/skill-decor-2.png" alt="" class="skill-decor" aria-hidden="true">
+                    <h3>Дизайн-системы</h3>
+                    <div class="tags">
+                        <span class="tag">UI-kit</span>
+                        <span class="tag">Компоненты</span>
+                        <span class="tag">Токены</span>
+                        <span class="tag">Storybook</span>
+                        <span class="tag">Документация</span>
+                    </div>
+                </div>
+                <!-- Skill 3 -->
+                <div class="skill-card">
+                    <span class="skill-card-shadow skill-card-shadow-multiply" aria-hidden="true"></span>
+                    <span class="skill-card-shadow skill-card-shadow-dodge" aria-hidden="true"></span>
+                    <img src="assets/images/skill-decor-3.png" alt="" class="skill-decor" aria-hidden="true">
+                    <h3>Исследования</h3>
+                    <div class="tags">
+                        <span class="tag">UX-аудит</span>
+                        <span class="tag">A/B-тесты</span>
+                        <span class="tag">Юзабилити-тесты</span>
+                        <span class="tag">Конкурентный анализ</span>
+                    </div>
+                </div>
+                <!-- Skill 4 -->
+                <div class="skill-card">
+                    <span class="skill-card-shadow skill-card-shadow-multiply" aria-hidden="true"></span>
+                    <span class="skill-card-shadow skill-card-shadow-dodge" aria-hidden="true"></span>
+                    <img src="assets/images/skill-decor-4.png" alt="" class="skill-decor" aria-hidden="true">
+                    <h3>Смежные навыки</h3>
+                    <div class="tags">
+                        <span class="tag">HTML / CSS</span>
+                        <span class="tag">No-code</span>
+                        <span class="tag">Микроанимации</span>
+                        <span class="tag">Photoshop</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lang-row">
+                <strong>Языки</strong>
+                <span>Свободно читаю техническую документацию и смотрю видео на английском в сферах дизайна и IT.</span>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER / CONTACTS -->
+    <footer class="contact-section section-padding">
+        <img src="assets/images/contact-glowing.svg" alt="" class="contact-glowing" aria-hidden="true">
+        <div class="contact-content">
+            <div class="contact-left">
+                <h2>Открыт к предложениям</h2>
+                <p>Рассматриваю постоянную работу <br class="contact-mobile-break">в команде<br>Буду рад обсудить роль, задачи и то, как могу быть полезен.</p>
+            </div>
+            <div class="contact-right">
+                <h3>Контакты</h3>
+                <div class="contact-list">
+                    <div class="contact-list-item">
+                        <span>Email</span>
+                        <a href="mailto:alex.beloglazkin@gmail.com">alex.beloglazkin@gmail.com</a>
+                    </div>
+                    <div class="contact-list-item">
+                        <span>Telegram</span>
+                        <a href="https://t.me/alnat2" target="_blank">@alnat2</a>
+                    </div>
+                    <div class="contact-list-item">
+                        <span>Телефон</span>
+                        <a href="tel:+79202809962">+7 (920) 280-99-62</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span><span class="footer-copy-name">© 2026 Александр Белоглазкин</span><span class="footer-copy-role">UX/UI дизайнер</span></span>
+            <nav class="footer-nav">
+                <a href="#cases">Кейсы</a>
+                <a href="#experience">Опыт</a>
+                <a href="#skills">Навыки</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js?v=tablet-first-screen"></script>
+</body>
+</html>

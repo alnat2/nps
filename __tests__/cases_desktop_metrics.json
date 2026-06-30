@@ -1,0 +1,72 @@
+{
+  "body": {
+    "width": 1440,
+    "height": 3687
+  },
+  "caseSection": {
+    "x": 0,
+    "y": 690,
+    "width": 1440,
+    "height": 642
+  },
+  "sectionHeader": {
+    "x": 100,
+    "y": 754,
+    "width": 1240,
+    "height": 40
+  },
+  "sectionTitle": {
+    "x": 100,
+    "y": 755,
+    "width": 282,
+    "height": 38
+  },
+  "sectionLink": {
+    "x": 749,
+    "y": 764,
+    "width": 128,
+    "height": 20
+  },
+  "casesGrid": {
+    "x": 100,
+    "y": 818,
+    "width": 1240,
+    "height": 450
+  },
+  "firstCard": {
+    "x": 100,
+    "y": 818,
+    "width": 800,
+    "height": 450
+  },
+  "secondCard": {
+    "x": 920,
+    "y": 818,
+    "width": 420,
+    "height": 450
+  },
+  "firstTags": {
+    "x": 120,
+    "y": 838,
+    "width": 226,
+    "height": 24
+  },
+  "secondTags": {
+    "x": 940,
+    "y": 838,
+    "width": 204,
+    "height": 24
+  },
+  "firstButton": {
+    "x": 120,
+    "y": 1206,
+    "width": 156,
+    "height": 42
+  },
+  "secondButton": {
+    "x": 940,
+    "y": 1206,
+    "width": 156,
+    "height": 42
+  }
+}

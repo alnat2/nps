@@ -1,0 +1,5 @@
+mean_rgb_diff=2.62
+changed_pixels=359202
+total_pixels=924480
+changed_percent=38.85
+extrema=((0, 195), (0, 224), (0, 212))

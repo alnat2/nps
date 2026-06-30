@@ -1,0 +1,5 @@
+average_channel_delta=4.01
+changed_pixels=53706
+total_pixels=705600
+changed_percent=7.61
+max_delta=593

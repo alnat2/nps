@@ -1,0 +1,66 @@
+{
+  "body": {
+    "width": 1440,
+    "height": 3400
+  },
+  "skillsSection": {
+    "x": 0,
+    "y": 2709,
+    "width": 1440,
+    "height": 488
+  },
+  "sectionHeader": {
+    "x": 100,
+    "y": 2773,
+    "width": 1240,
+    "height": 40
+  },
+  "skillsGrid": {
+    "x": 100,
+    "y": 2837,
+    "width": 1240,
+    "height": 213
+  },
+  "firstCard": {
+    "x": 100,
+    "y": 2837,
+    "width": 295,
+    "height": 213
+  },
+  "secondCard": {
+    "x": 415,
+    "y": 2837,
+    "width": 295,
+    "height": 213
+  },
+  "thirdCard": {
+    "x": 730,
+    "y": 2837,
+    "width": 295,
+    "height": 213
+  },
+  "fourthCard": {
+    "x": 1045,
+    "y": 2837,
+    "width": 295,
+    "height": 213
+  },
+  "firstCardTitle": {
+    "x": 120,
+    "y": 2857,
+    "width": 255,
+    "height": 31
+  },
+  "firstCardTags": {
+    "x": 120,
+    "y": 2904,
+    "width": 255,
+    "height": 126
+  },
+  "langRow": {
+    "x": 100,
+    "y": 3082,
+    "width": 1240,
+    "height": 51
+  }
+}

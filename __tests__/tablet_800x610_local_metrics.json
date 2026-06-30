@@ -1,0 +1,184 @@
+{
+  "actions": {
+    "display": "flex",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "height": 42,
+    "lineHeight": "normal",
+    "width": 438,
+    "x": 103,
+    "y": 15
+  },
+  "avatar": {
+    "display": "block",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "height": 375,
+    "lineHeight": "normal",
+    "width": 360,
+    "x": 508,
+    "y": 189
+  },
+  "avatarBg": {
+    "display": "block",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "height": 326,
+    "lineHeight": "normal",
+    "width": 326,
+    "x": 542,
+    "y": 235
+  },
+  "avatarImg": {
+    "display": "block",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "height": 375,
+    "lineHeight": "normal",
+    "width": 358,
+    "x": 508,
+    "y": 189
+  },
+  "body": {
+    "scrollWidth": 800
+  },
+  "cases": {
+    "display": "block",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "height": 958,
+    "lineHeight": "normal",
+    "width": 800,
+    "x": 0,
+    "y": 610
+  },
+  "contacts": {
+    "display": "flex",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "height": 44,
+    "lineHeight": "normal",
+    "width": 203,
+    "x": 577,
+    "y": 14
+  },
+  "ctas": {
+    "display": "flex",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "height": 42,
+    "lineHeight": "normal",
+    "width": 404,
+    "x": 20,
+    "y": 488
+  },
+  "description": {
+    "display": "block",
+    "fontSize": "18px",
+    "fontWeight": "500",
+    "height": 81,
+    "lineHeight": "27px",
+    "width": 586,
+    "x": 20,
+    "y": 359
+  },
+  "descriptionText": "Веду проекты полного цикла от исследования\nдо передачи в разработку.\nСейчас в Оптима Сервис, фокус на дизайн-системе и UX.",
+  "firstBtn": {
+    "display": "flex",
+    "fontSize": "18px",
+    "fontWeight": "500",
+    "height": 42,
+    "lineHeight": "18px",
+    "width": 207,
+    "x": 20,
+    "y": 488
+  },
+  "hamburger": {
+    "display": "none",
+    "fontSize": "13.3333px",
+    "fontWeight": "400",
+    "height": 0,
+    "lineHeight": "normal",
+    "width": 0,
+    "x": 0,
+    "y": 0
+  },
+  "hero": {
+    "display": "block",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "height": 610,
+    "lineHeight": "normal",
+    "width": 800,
+    "x": 0,
+    "y": 0
+  },
+  "heroBg": {
+    "display": "block",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "height": 544,
+    "lineHeight": "normal",
+    "width": 720,
+    "x": 416,
+    "y": -14
+  },
+  "heroContent": {
+    "display": "flex",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "height": 378,
+    "lineHeight": "normal",
+    "width": 640,
+    "x": 20,
+    "y": 152
+  },
+  "html": {
+    "scrollWidth": 800
+  },
+  "logo": {
+    "display": "block",
+    "fontSize": "16px",
+    "fontWeight": "400",
+    "height": 23,
+    "lineHeight": "normal",
+    "width": 47,
+    "x": 20,
+    "y": 24.5
+  },
+  "secondBtn": {
+    "display": "flex",
+    "fontSize": "18px",
+    "fontWeight": "500",
+    "height": 42,
+    "lineHeight": "18px",
+    "width": 185,
+    "x": 239,
+    "y": 488
+  },
+  "subtitle": {
+    "display": "block",
+    "fontSize": "24px",
+    "fontWeight": "300",
+    "height": 31,
+    "lineHeight": "31.2px",
+    "width": 640,
+    "x": 20,
+    "y": 152
+  },
+  "title": {
+    "display": "block",
+    "fontSize": "40px",
+    "fontWeight": "700",
+    "height": 144,
+    "lineHeight": "48px",
+    "width": 709,
+    "x": 20,
+    "y": 195
+  },
+  "viewport": {
+    "clientWidth": 800,
+    "innerHeight": 610,
+    "innerWidth": 800
+  }
+}

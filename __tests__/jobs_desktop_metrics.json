@@ -1,0 +1,78 @@
+{
+  "body": {
+    "width": 1440,
+    "height": 3169
+  },
+  "jobsSection": {
+    "x": 0,
+    "y": 1332,
+    "width": 1440,
+    "height": 1377
+  },
+  "sectionHeader": {
+    "x": 100,
+    "y": 1396,
+    "width": 1240,
+    "height": 40
+  },
+  "timeline": {
+    "x": 100,
+    "y": 1460,
+    "width": 1240,
+    "height": 1185
+  },
+  "firstCard": {
+    "x": 100,
+    "y": 1460,
+    "width": 1240,
+    "height": 377
+  },
+  "secondCard": {
+    "x": 100,
+    "y": 1837,
+    "width": 1240,
+    "height": 350
+  },
+  "thirdCard": {
+    "x": 100,
+    "y": 2187,
+    "width": 1240,
+    "height": 458
+  },
+  "firstDate": {
+    "x": 100,
+    "y": 1484,
+    "width": 260,
+    "height": 20
+  },
+  "firstLine": {
+    "x": 400,
+    "y": 1484,
+    "width": 16,
+    "height": 329
+  },
+  "firstContent": {
+    "x": 456,
+    "y": 1484,
+    "width": 884,
+    "height": 329
+  },
+  "firstTag": {
+    "x": 456,
+    "y": 1484,
+    "width": 116,
+    "height": 27
+  },
+  "firstTitle": {
+    "x": 456,
+    "y": 1527,
+    "width": 884,
+    "height": 31
+  },
+  "firstDesc": {
+    "x": 456,
+    "y": 1570,
+    "width": 884,
+    "height": 243
+  }
+}

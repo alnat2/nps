@@ -1,0 +1,140 @@
+{
+  "avatar": {
+    "bottom": 602,
+    "fontSize": "16px",
+    "height": 460,
+    "left": 915,
+    "lineHeight": "normal",
+    "right": 1357,
+    "top": 142,
+    "width": 442,
+    "x": 915,
+    "y": 142
+  },
+  "cases": {
+    "bottom": 1606,
+    "fontSize": "16px",
+    "height": 916,
+    "left": 0,
+    "lineHeight": "normal",
+    "right": 1440,
+    "top": 690,
+    "width": 1440,
+    "x": 0,
+    "y": 690
+  },
+  "contacts": {
+    "bottom": 58,
+    "fontSize": "16px",
+    "height": 44,
+    "left": 1110.98,
+    "lineHeight": "normal",
+    "right": 1340,
+    "top": 14,
+    "width": 229.02,
+    "x": 1110.98,
+    "y": 14
+  },
+  "content": {
+    "bottom": 570.19,
+    "fontSize": "16px",
+    "height": 378.19,
+    "left": 100,
+    "lineHeight": "normal",
+    "right": 740,
+    "top": 192,
+    "width": 640,
+    "x": 100,
+    "y": 192
+  },
+  "ctas": {
+    "bottom": 570.19,
+    "fontSize": "16px",
+    "height": 42,
+    "left": 100,
+    "lineHeight": "normal",
+    "right": 740,
+    "top": 528.19,
+    "width": 640,
+    "x": 100,
+    "y": 528.19
+  },
+  "description": {
+    "bottom": 480.19,
+    "fontSize": "18px",
+    "height": 81,
+    "left": 100,
+    "lineHeight": "27px",
+    "right": 686,
+    "top": 399.19,
+    "width": 586,
+    "x": 100,
+    "y": 399.19
+  },
+  "header": {
+    "bottom": 72,
+    "fontSize": "16px",
+    "height": 72,
+    "left": 0,
+    "lineHeight": "normal",
+    "right": 1440,
+    "top": 0,
+    "width": 1440,
+    "x": 0,
+    "y": 0
+  },
+  "hero": {
+    "bottom": 690,
+    "fontSize": "16px",
+    "height": 690,
+    "left": 0,
+    "lineHeight": "normal",
+    "right": 1440,
+    "top": 0,
+    "width": 1440,
+    "x": 0,
+    "y": 0
+  },
+  "logo": {
+    "bottom": 48,
+    "fontSize": "16px",
+    "height": 24,
+    "left": 100,
+    "lineHeight": "normal",
+    "right": 149.03,
+    "top": 24,
+    "width": 49.03,
+    "x": 100,
+    "y": 24
+  },
+  "nav": {
+    "bottom": 57,
+    "fontSize": "16px",
+    "height": 42,
+    "left": 507.52,
+    "lineHeight": "normal",
+    "right": 932.48,
+    "top": 15,
+    "width": 424.97,
+    "x": 507.52,
+    "y": 15
+  },
+  "title": {
+    "bottom": 379.19,
+    "fontSize": "40px",
+    "height": 144,
+    "left": 100,
+    "lineHeight": "48px",
+    "right": 809,
+    "top": 235.19,
+    "width": 709,
+    "x": 100,
+    "y": 235.19
+  },
+  "url": "http://127.0.0.1:8765/",
+  "viewport": {
+    "clientWidth": 1440,
+    "height": 900,
+    "width": 1440
+  }
+}

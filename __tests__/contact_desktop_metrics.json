@@ -1,0 +1,48 @@
+{
+  "body": {
+    "width": 1440,
+    "height": 3687
+  },
+  "contactSection": {
+    "x": 0,
+    "y": 3197,
+    "width": 1440,
+    "height": 490
+  },
+  "contactContent": {
+    "x": 0,
+    "y": 3197,
+    "width": 1440,
+    "height": 421
+  },
+  "contactLeft": {
+    "x": 100,
+    "y": 3351,
+    "width": 640,
+    "height": 112
+  },
+  "contactRight": {
+    "x": 984,
+    "y": 3277,
+    "width": 356,
+    "height": 261
+  },
+  "contactList": {
+    "x": 1008,
+    "y": 3356,
+    "width": 308,
+    "height": 158
+  },
+  "footerBottom": {
+    "x": 0,
+    "y": 3618,
+    "width": 1440,
+    "height": 68
+  },
+  "contactGlow": {
+    "x": -284,
+    "y": 3086,
+    "width": 1035,
+    "height": 987
+  }
+}
