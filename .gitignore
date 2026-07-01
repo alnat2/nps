@@ -1,2 +1,8 @@
 node_modules/
 .DS_Store
+__tests__/*.png
+__tests__/*.jpg
+__tests__/*_raw
+__tests__/*_metrics.json
+__tests__/*_metrics.txt
+.agents/

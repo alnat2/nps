@@ -35,6 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Close menu on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+            setMobileMenuState(false);
+            hamburger.focus();
+        }
+    });
+
     // 3. Scroll Spy for Navigation Links
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.desktop-only .nav-item');

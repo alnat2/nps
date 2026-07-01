@@ -1,8 +1,9 @@
 @font-face {
   font-family: 'TikTok Sans';
-  src: url('fonts/TikTokSans-VariableFont_opsz,slnt,wdth,wght.ttf') format('truetype');
+  src: url('fonts/TikTokSans-Variable.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
+  font-display: swap;
 }
 
 :root {
@@ -899,7 +900,7 @@ a {
     align-items: flex-start;
     gap: 16px;
     background-color: #f2e9ce;
-    background-image: url('assets/images/skill-card-noise.png');
+    background-image: url('assets/images/skill-card-noise.webp');
     background-size: cover;
     background-position: center;
     background-blend-mode: luminosity;
@@ -1783,7 +1784,7 @@ a {
     align-items: flex-start;
     gap: 16px;
     background-color: #f2e9ce;
-    background-image: url('assets/images/skill-card-noise.png');
+    background-image: url('assets/images/skill-card-noise.webp');
     background-size: cover;
     background-position: center;
     background-blend-mode: luminosity;
@@ -2664,7 +2665,7 @@ a {
     width: 100%;
     height: 254px;
     display: flex;
-    grid-template-columns: none;
+    /* grid not used here; flexbox handles layout */
     gap: 20px;
     align-items: stretch;
     overflow-x: auto;
@@ -2692,7 +2693,7 @@ a {
     align-items: flex-start;
     gap: 16px;
     background-color: #f2e9ce;
-    background-image: url('assets/images/skill-card-noise.png');
+    background-image: url('assets/images/skill-card-noise.webp');
     background-size: cover;
     background-position: center;
     background-blend-mode: luminosity;

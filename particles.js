@@ -1,4 +1,7 @@
+document.addEventListener('DOMContentLoaded', () => {
+
 const canvas = document.getElementById('particle-canvas');
+if (!canvas) return; // Guard: exit if canvas element is missing
 const ctx = canvas.getContext('2d');
 
 const PARTICLE_COUNT = 250;
@@ -97,7 +100,15 @@ for (let i = 0; i < PARTICLE_COUNT; i++) {
   particles.push(new Particle());
 }
 
+let animationId = null;
+
 function animate() {
+  // Skip animation when canvas is hidden (e.g. mobile ≤1024px)
+  if (canvas.offsetParent === null) {
+    animationId = requestAnimationFrame(animate);
+    return;
+  }
+
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   
   // Draw particles
@@ -106,8 +117,10 @@ function animate() {
     particle.draw();
   }
   
-  requestAnimationFrame(animate);
+  animationId = requestAnimationFrame(animate);
 }
 
 // Start animation loop
 animate();
+
+}); // end DOMContentLoaded
