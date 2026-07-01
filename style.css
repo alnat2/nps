@@ -7,6 +7,28 @@
 
 :root {
   --font-family: 'TikTok Sans', sans-serif;
+  --font-family-base: var(--font-family);
+  --text-lg-hero-kicker: 300 24px/1.3 var(--font-family-base);
+  --text-lg-hero-title: 700 40px/1.2 var(--font-family-base);
+  --text-lg-hero-body: 500 18px/1.5 var(--font-family-base);
+  --text-lg-h2: 700 32px/1.2 var(--font-family-base);
+  --text-lg-h3: 600 24px/1.3 var(--font-family-base);
+  --text-lg-label: 500 18px/1 var(--font-family-base);
+  --text-lg-body: 400 18px/1.5 var(--font-family-base);
+  --text-lg-body-medium: 500 18px/1.5 var(--font-family-base);
+  --text-lg-caption: 400 14px/1.4 var(--font-family-base);
+  --text-lg-footnote: 400 12px/1.4 var(--font-family-base);
+  --text-sm-h1: 700 36px/1.3 var(--font-family-base);
+  --text-sm-h2: 700 28px/1.2 var(--font-family-base);
+  --text-sm-h3: 600 24px/1.3 var(--font-family-base);
+  --text-sm-h3-light: 600 24px/1.3 var(--font-family-base);
+  --text-sm-label: 500 18px/1 var(--font-family-base);
+  --text-sm-body-medium: 500 16px/1.5 var(--font-family-base);
+  --text-sm-body-regular: 400 16px/1.5 var(--font-family-base);
+  --text-sm-body-strong: 500 18px/1.5 var(--font-family-base);
+  --text-sm-caption: 400 13px/1.4 var(--font-family-base);
+  --text-sm-tag: 400 14px/1.4 var(--font-family-base);
+  --text-sm-footnote: 400 12px/1.4 var(--font-family-base);
   --bg-color: #29190d;
   --text-primary: #e1e1e1;
   --text-secondary: #c4c3c2;
@@ -3020,4 +3042,202 @@ a {
 }
 .nav-link.highlight:hover {
   color: #ffc458;
+}
+
+/* TEXT STYLES SYNC */
+.contact-text,
+.nav-link,
+.mobile-menu-contact,
+.btn {
+  font: var(--text-lg-label);
+}
+
+.hero-subtitle {
+  font: var(--text-lg-hero-kicker);
+}
+
+.hero-title {
+  font: var(--text-lg-hero-title);
+}
+
+.hero-description {
+  font: var(--text-lg-hero-body);
+}
+
+.section-title,
+.contact-left h2 {
+  font: var(--text-lg-h2);
+}
+
+.case-text h3,
+.job-content h3,
+.skill-card h3,
+.contact-right h3 {
+  font: var(--text-lg-h3);
+}
+
+.section-link,
+.case-btn,
+.skill-card .tag,
+.contact-list-item,
+.footer-nav a {
+  font: var(--text-lg-label);
+}
+
+.case-text p,
+.job-desc,
+.lang-row span {
+  font: var(--text-lg-body);
+}
+
+.hero-description,
+.contact-left p,
+.job-desc strong,
+.lang-row strong {
+  font: var(--text-lg-body-medium);
+}
+
+.tag,
+.case-card .tag,
+.job-date,
+.footer-bottom > span {
+  font: var(--text-lg-caption);
+}
+
+.jobs-section .tag.fancy {
+  font: var(--text-lg-footnote);
+}
+
+@media (max-width: 1279px) {
+  .hero-subtitle {
+    font: var(--text-lg-hero-kicker);
+  }
+
+  .hero-title {
+    font: var(--text-lg-hero-title);
+  }
+
+  .hero-description {
+    font: var(--text-lg-hero-body);
+  }
+
+  .case-section .section-title,
+  .jobs-section .section-title,
+  .skills-section .section-title,
+  .contact-left h2 {
+    font: var(--text-lg-h2);
+  }
+
+  .case-section .section-link,
+  .jobs-section .section-link,
+  .skills-section .section-link,
+  .case-btn,
+  .skill-card .tag,
+  .contact-list-item,
+  .contact-list-item span,
+  .contact-list-item a,
+  .footer-nav a {
+    font: var(--text-lg-label);
+  }
+
+  .case-text h3,
+  .card-small .case-text h3,
+  .job-content h3,
+  .skill-card h3,
+  .contact-right h3 {
+    font: var(--text-lg-h3);
+  }
+
+  .case-card .tag,
+  .job-date,
+  .footer-bottom > span {
+    font: var(--text-lg-caption);
+  }
+
+  .case-text p,
+  .card-small .case-text p,
+  .job-desc,
+  .skills-section .lang-row span {
+    font: var(--text-lg-body);
+  }
+
+  .job-desc strong,
+  .skills-section .lang-row strong,
+  .contact-left p {
+    font: var(--text-lg-body-medium);
+  }
+
+  .jobs-section .tag.fancy {
+    font: var(--text-lg-footnote);
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-subtitle {
+    font: var(--text-sm-h3-light);
+  }
+
+  .hero-title {
+    font: var(--text-sm-h1);
+  }
+
+  .hero-description {
+    font: var(--text-sm-body-medium);
+  }
+
+  .case-section .section-title,
+  .jobs-section .section-title,
+  .skills-section .section-title,
+  .contact-left h2 {
+    font: var(--text-sm-h2);
+  }
+
+  .case-text h3,
+  .card-small .case-text h3,
+  .job-content h3,
+  .skill-card h3,
+  .contact-right h3 {
+    font: var(--text-sm-h3);
+  }
+
+  .case-section .section-link,
+  .jobs-section .section-link,
+  .skills-section .section-link,
+  .case-btn,
+  .skill-card .tag,
+  .contact-list-item,
+  .contact-list-item span,
+  .contact-list-item a,
+  .footer-nav a {
+    font: var(--text-sm-label);
+  }
+
+  .case-card .tag {
+    font: var(--text-sm-tag);
+  }
+
+  .case-text p,
+  .card-small .case-text p,
+  .job-desc,
+  .skills-section .lang-row span {
+    font: var(--text-sm-body-regular);
+  }
+
+  .job-desc strong {
+    font: var(--text-sm-body-strong);
+  }
+
+  .skills-section .lang-row strong,
+  .contact-left p {
+    font: var(--text-sm-body-medium);
+  }
+
+  .jobs-section .tag.fancy {
+    font: var(--text-sm-footnote);
+  }
+
+  .job-date,
+  .footer-bottom > span {
+    font: var(--text-sm-caption);
+  }
 }
