@@ -2756,10 +2756,10 @@ a {
   .skill-decor {
     position: absolute;
     z-index: 0;
-    right: -60px;
-    bottom: -22px;
-    width: 160px;
-    height: 160px;
+    right: -90px;
+    bottom: -27px;
+    width: 200px;
+    height: 200px;
     opacity: 0.75;
     mix-blend-mode: color-burn;
     object-fit: cover;
