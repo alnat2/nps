@@ -69,6 +69,11 @@ body::-webkit-scrollbar {
   height: 0;
 }
 
+main {
+  position: relative;
+  overflow: visible;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -309,8 +314,13 @@ a {
   height: 943px;
   background: radial-gradient(circle, rgba(105,45,183,0.8) 0%, rgba(20,15,38,0) 70%);
   filter: blur(80px);
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
+}
+
+main > section {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-container {
@@ -3242,4 +3252,8 @@ a {
   .footer-bottom > span {
     font: var(--text-sm-caption);
   }
+}
+
+.case-section {
+  background-color: transparent;
 }
