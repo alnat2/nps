@@ -546,6 +546,10 @@ main > section {
   content: ' — ';
 }
 
+.contact-texture {
+  display: none;
+}
+
 @media (min-width: 1280px) {
   .case-section {
     width: 100%;
@@ -1053,8 +1057,22 @@ main > section {
     pointer-events: none;
   }
 
+  .contact-texture {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 720px + 840px);
+    z-index: 0;
+    display: block;
+    width: 600px;
+    height: 495px;
+    pointer-events: none;
+    max-width: none;
+    user-select: none;
+  }
+
   .contact-content {
     position: relative;
+    z-index: 1;
     width: 1440px;
     min-height: 421px;
     flex: 0 0 auto;
@@ -1149,6 +1167,7 @@ main > section {
 
   .footer-bottom {
     position: relative;
+    z-index: 1;
     width: 1440px;
     min-height: 68px;
     flex: 0 0 auto;
