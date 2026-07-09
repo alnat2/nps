@@ -1,41 +1,49 @@
 ---
 name: figma-sync-content
-description: Sync approved text content variables from Figma into this project's local content token file. Use when the user asks to import, refresh, pull, or normalize Figma Variables content into `utils/content/token.json`, especially for the Experience collection or future text-content collections. This skill writes JSON only and must not update `index.html`, templates, CSS, or rendered output.
+description: Sync this project's local content tokens from `utils/content/token.json` into Figma text variables. Use when the user asks to push, update, refresh, or normalize Figma Variables from the JSON source of truth, especially for collections listed in `nps-content-sync.syncedCollections`. This skill writes Figma variables only and must not update JSON, `index.html`, templates, CSS, or rendered output.
 ---
 
 # Figma Sync Content
 
 ## Overview
 
-Import text variables from Figma into `utils/content/token.json` while preserving this project's content-token contract. Treat Figma as the upstream source and JSON as the local source of truth for later project rendering.
+Update Figma text variables from `utils/content/token.json` while preserving this project's content-token contract. Treat JSON as the source of truth and Figma variables as derived content.
 
 ## Workflow
 
-1. Confirm the Figma source is available.
-   - If the user has not provided a Figma URL, file key, node, or already-open Figma context, ask for the source before changing files.
-   - Use Figma MCP tools when available. If a write or programmatic Figma inspection requires `use_figma`, load the `figma-use` skill first.
+1. Confirm the Figma target is available.
+   - If the user has not provided a Figma URL, file key, node, or already-open Figma context, ask for the target before changing Figma.
+   - Use Figma MCP tools when available. For writes or programmatic Figma inspection with `use_figma`, load the `figma-use` skill first.
 
-2. Read current local content from `utils/content/token.json`.
-   - Preserve collections that are not part of the requested sync.
+2. Read local content from `utils/content/token.json`.
+   - Parse JSON before touching Figma.
+   - Treat `nps-content-sync.syncedCollections` as the default collection allowlist.
+   - If the user names specific collections, sync only those collections and verify they are present in JSON.
    - Preserve DTCG-style fields: `$type`, `$value`, `$description`, `$extensions`.
 
-3. Normalize imported Figma variables into project shape.
-   - Current canonical path: `experience`.
-   - Current canonical order: `optima`, `finpro`, `xlab`.
-   - Current fields per experience item: `tag`, `dates`, `title`, `par1title`, `par1info`, `par2title`, `par2info`.
-   - Store `par2info` as one string with bullet markers `•` and newline separators, because this maps cleanly to Figma text variables.
+3. Flatten JSON tokens into Figma variable paths.
+   - Sync only entries with `$type: "string"` and a string `$value`.
+   - Use the top-level JSON key as the Figma variable collection name.
+   - Use nested JSON keys as the variable path joined with `/`.
+   - Example: `top-nav.menu.item1.$value` maps to collection `top-nav`, variable `menu/item1`.
+   - Preserve multiline strings such as `experience.*.par2info` exactly as JSON stores them, including `•` and newline separators.
 
-4. Update only `utils/content/token.json`.
-   - Do not update `index.html`.
-   - Do not generate HTML.
-   - Do not edit CSS or assets.
+4. Update Figma variables.
+   - Create missing variable collections when they are listed in `syncedCollections`.
+   - Create missing string variables inside those collections when a JSON token path has no matching Figma variable.
+   - Update existing variable values from JSON.
+   - Prefer text-content scopes for string variables when Figma supports scopes.
+   - Do not bind variables to layers unless the user explicitly asks for binding.
 
 5. Validate the result.
-   - Parse JSON with Node before finishing.
-   - Report changed collections and any missing or ambiguous Figma variables.
+   - Re-read or inspect the changed Figma variables after writing.
+   - Confirm every synced JSON string token has a matching Figma variable with the same value.
+   - Report changed collections and any Figma write failures or ambiguous duplicate variables.
 
 ## Stop Lines
 
-- If Figma content conflicts with the established project contract, report the mismatch instead of inventing a new structure.
+- Do not edit `utils/content/token.json`.
+- Do not update `index.html`, templates, CSS, or assets.
+- If Figma contains duplicate variables for the same collection/path, report the ambiguity instead of guessing.
 - If the task is to render JSON into HTML, use `project-sync-content` instead.
 - If the task is only to compare sources, use `content-audit` instead.
