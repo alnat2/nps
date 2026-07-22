@@ -2275,11 +2275,11 @@ main > section {
 
   .case-section .section-header {
     width: 100%;
-    height: 40px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .case-section .section-title {
@@ -2288,7 +2288,7 @@ main > section {
     font-size: 24px;
     font-weight: 700;
     line-height: 1.2;
-    white-space: nowrap;
+    white-space: normal;
   }
 
   .case-title-desktop,
@@ -2492,11 +2492,11 @@ main > section {
 
   .jobs-section .section-header {
     width: 100%;
-    height: 40px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .jobs-section .section-title {
@@ -2505,7 +2505,7 @@ main > section {
     font-size: 24px;
     font-weight: 700;
     line-height: 1.2;
-    white-space: nowrap;
+    white-space: normal;
   }
 
   .jobs-section .section-link {

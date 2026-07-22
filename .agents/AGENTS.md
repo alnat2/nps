@@ -16,10 +16,11 @@
 - **Figma to Local Verification:** For every new section or breakpoint:
   1. Retrieve the original screenshot from Figma.
   2. Implement the layout in HTML/CSS.
-  3. Take a screenshot of the local result.
-  4. Compare the local screenshot against the Figma screenshot.
-  5. Refine the code until it is a 100% visual match.
-  6. Only report completion to the user AFTER this rigorous self-verification is fully satisfied.
+  3. **Viewport Size:** Ensure you set the correct viewport width before taking screenshots (e.g., using `puppeteer_evaluate` to set `document.documentElement.style.width = '375px'` or `document.body.style.width = '375px'` for mobile testing), because screenshot tools default to 800x600 and will miss mobile breakpoint issues.
+  4. Take a screenshot of the local result.
+  5. Compare the local screenshot against the Figma screenshot.
+  6. Refine the code until it is a 100% visual match.
+  7. Only report completion to the user AFTER this rigorous self-verification is fully satisfied.
 
 ## Typography Verification
 - **Double Check Fonts:** Always use `get_design_context` from the Figma MCP to extract the exact font size, line-height, and font-weight for text elements. Never guess these values. Also, verify where the line breaks occur in Figma (e.g. by counting lines) and insert `<br class="mobile-only">` or similar tags to ensure the typography matches pixel-perfect.
