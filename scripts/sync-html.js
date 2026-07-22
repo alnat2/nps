@@ -221,6 +221,101 @@ function splitByBr(innerHtml) {
   return { segments, brTags };
 }
 
+function decodeEntities(value) {
+  return String(value)
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/&#([0-9]+);/g, (_, number) => String.fromCodePoint(parseInt(number, 10)));
+}
+
+function segmentWords(htmlSegment) {
+  return decodeEntities(htmlSegment.replace(/<[^>]*>/g, ' '))
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+}
+
+function allocateWordCounts(wordsLength, segments) {
+  const currentCounts = segments.map((segment) => segmentWords(segment).length);
+  const currentTotal = currentCounts.reduce((sum, count) => sum + count, 0);
+
+  if (currentTotal === wordsLength) {
+    return currentCounts;
+  }
+
+  if (wordsLength === 0) {
+    return segments.map(() => 0);
+  }
+
+  if (currentTotal === 0) {
+    return segments.map((_, index) => (index === 0 ? wordsLength : 0));
+  }
+
+  const activeIndexes = currentCounts
+    .map((count, index) => (count > 0 ? index : -1))
+    .filter((index) => index !== -1);
+
+  const minimum = wordsLength >= activeIndexes.length ? 1 : 0;
+  const rawCounts = currentCounts.map((count) => (count / currentTotal) * wordsLength);
+  const allocated = rawCounts.map((raw, index) => (
+    currentCounts[index] > 0 ? Math.max(minimum, Math.floor(raw)) : 0
+  ));
+
+  let delta = wordsLength - allocated.reduce((sum, count) => sum + count, 0);
+
+  if (delta > 0) {
+    const byRemainder = rawCounts
+      .map((raw, index) => ({ index, remainder: raw - Math.floor(raw) }))
+      .sort((a, b) => b.remainder - a.remainder);
+
+    for (let index = 0; delta > 0; index += 1) {
+      allocated[byRemainder[index % byRemainder.length].index] += 1;
+      delta -= 1;
+    }
+  }
+
+  if (delta < 0) {
+    const removable = allocated
+      .map((count, index) => ({ index, count }))
+      .filter((item) => item.count > minimum)
+      .sort((a, b) => b.count - a.count);
+
+    for (let index = 0; delta < 0 && removable.length > 0; index += 1) {
+      const item = removable[index % removable.length];
+      if (allocated[item.index] > minimum) {
+        allocated[item.index] -= 1;
+        delta += 1;
+      }
+    }
+  }
+
+  return allocated;
+}
+
+function splitTextByExistingBreaks(tokenValue, segments) {
+  const explicitSegments = tokenValue.split(/\r?\n/);
+  if (explicitSegments.length === segments.length) {
+    return explicitSegments;
+  }
+
+  const words = String(tokenValue).trim().split(/\s+/).filter(Boolean);
+  const counts = allocateWordCounts(words.length, segments);
+  let offset = 0;
+
+  // Preserve layout-owned <br> tags by distributing words across the existing
+  // visual segments, using the current segment word counts as weights.
+  return counts.map((count) => {
+    const segment = words.slice(offset, offset + count).join(' ');
+    offset += count;
+    return segment;
+  });
+}
+
 function renderWithPreservedBreaks({
   filePath,
   innerHtml,
@@ -229,16 +324,7 @@ function renderWithPreservedBreaks({
   report,
 }) {
   const { segments, brTags } = splitByBr(innerHtml);
-  const textSegments = tokenValue.split(/\r?\n/);
-
-  if (textSegments.length !== segments.length) {
-    report.structuralWarnings.push({
-      filePath,
-      tokenPath,
-      message: `data-token-preserve-br needs ${segments.length} JSON lines, found ${textSegments.length}`,
-    });
-    return innerHtml;
-  }
+  const textSegments = splitTextByExistingBreaks(tokenValue, segments);
 
   let output = '';
 
