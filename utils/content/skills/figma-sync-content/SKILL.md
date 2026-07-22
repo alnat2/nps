@@ -33,7 +33,7 @@ Update Figma text variables from `utils/content/token.json` while preserving thi
    - Create missing string variables inside those collections when a JSON token path has no matching Figma variable.
    - Update existing variable values from JSON.
    - Prefer text-content scopes for string variables when Figma supports scopes.
-   - Do not bind variables to layers unless the user explicitly asks for binding.
+   - Do not bind variables to Figma text layers.
 
 5. Validate the result.
    - Re-read or inspect the changed Figma variables after writing.
@@ -44,6 +44,7 @@ Update Figma text variables from `utils/content/token.json` while preserving thi
 
 - Do not edit `utils/content/token.json`.
 - Do not update `index.html`, templates, CSS, or assets.
+- Do not search for, edit, or bind Figma text layers.
 - If Figma contains duplicate variables for the same collection/path, report the ambiguity instead of guessing.
 - If the task is to render JSON into HTML, use `project-sync-content` instead.
 - If the task is only to compare sources, use `content-audit` instead.

@@ -8,6 +8,7 @@
 - **Answer First, Act Later:** When the user asks a question, ALWAYS answer the question first. If applicable, propose a plan of action or suggest what needs to be done next. DO NOT run any modifying commands or edit any code until the user explicitly approves the proposed plan or gives a direct instruction to execute it.
 - **Figma References:** When reporting Figma work to the user, refer to elements by their Figma layer/frame/component names. Do not expose raw node IDs unless the user explicitly asks for them or they are needed for a debugging handoff.
 - **Completion Updates:** When a task is complete, briefly let the user know in chat. Do not explain what was done unless the user explicitly asks for details, a summary, or a rationale.
+- **Desktop First:** When Figma has desktop, tablet, and mobile variants and a content-token mapping decision is ambiguous, use the desktop version as the reference. Do not plan or perform tablet/mobile text-layer binding as part of this content-token pipeline.
 
 ## Strict Adherence
 - **Do Not Invent:** If something is not explicitly stated in the design or documents, DO NOT invent or assume values (e.g., adding `100vh` just because it's common). If requirements are unclear or missing, ALWAYS ask the user for clarification before proceeding.

@@ -1,54 +1,72 @@
 ---
 name: project-sync-content
-description: Render this project's local content tokens into project files. Use when the user asks to update `index.html`, templates, or generated project output from `utils/content/token.json`, especially for the Experience section. This skill consumes local JSON and writes project files only; it must not read from or sync Figma.
+description: Sync this project's local content tokens into HTML and other rendered project files. Use when the user asks to update code, HTML, templates, or project output from `utils/content/token.json`. This skill treats JSON as the source of truth, uses `scripts/sync-html.js` for deterministic HTML updates, writes project files only, and must not read from or sync Figma.
 ---
 
 # Project Sync Content
 
 ## Overview
 
-Apply `utils/content/token.json` to the static site while preserving existing layout, classes, accessibility attributes, and visual behavior. Treat JSON as the source of truth and rendered HTML as derived output.
+Apply `utils/content/token.json` to rendered project files while preserving layout, classes, accessibility attributes, and visual behavior.
+
+Use this skill as the process wrapper for JSON -> code sync. The deterministic implementation is `scripts/sync-html.js`; prefer running or inspecting that script instead of hand-editing synced text.
 
 ## Workflow
 
-1. Read the local content file.
+1. Read the local content contract.
    - Canonical path: `utils/content/token.json`.
-   - Parse JSON before editing project files.
-   - For `experience`, use the object key order unless an explicit order field is later added.
+   - Read `nps-content-sync.syncedCollections`.
+   - Ignore the `nps-content-sync` configuration block as content.
+   - Treat only string tokens with string `$value` as syncable content.
 
-2. Validate required Experience fields before rendering.
-   - Required item fields: `tag`, `dates`, `title`, `par1title`, `par1info`, `par2title`, `par2info`.
-   - Each field must have a string `$value`.
-   - Parse `par2info` by splitting on newline, trimming each line, and removing one leading `•` plus surrounding whitespace for list text.
+2. Confirm HTML mapping exists.
+   - Sync targets are elements with explicit `data-token`.
+   - The token path format is `collection/path/name`, for example `experience/optima/dates`.
+   - Do not infer mappings from matching text alone.
+   - If mapping is missing, stop and say the HTML needs `data-token` attributes before automatic sync can update that content.
 
-3. Update the smallest possible region.
-   - Current target: the Experience timeline inside `index.html`.
-   - Preserve existing section wrappers, class names, comments where useful, and link targets.
-   - Prefer adding stable generator markers around generated regions before replacing large HTML blocks.
+3. Run the deterministic sync script.
+   - Default check: `node scripts/sync-html.js --check`.
+   - Apply changes only when the user asked to update project files: `node scripts/sync-html.js`.
+   - Use `--root <path>` or `--token-file <path>` only for non-standard locations.
 
-4. Escape rendered text.
-   - Insert text safely as HTML text content, not raw HTML.
-   - Preserve intentional line breaks only when the design already requires them.
+4. Interpret sync results.
+   - Missing in JSON: error. HTML references a token that does not exist.
+   - Structural warnings: error until resolved. The script skipped content to avoid damaging markup.
+   - Would change files in `--check`: expected when content is stale.
+   - Unused tokens in HTML: coverage information, not a failure by itself.
 
-5. Verify the output.
-   - Re-parse JSON.
-   - Inspect the rendered HTML diff.
-   - For visual-risk changes, run the existing Puppeteer checks or targeted screenshot checks when practical.
+5. Inspect the diff after applying.
+   - Confirm changes are text-only unless the mapped element intentionally renders a list.
+   - Preserve existing section wrappers, class names, links, ARIA attributes, comments, and responsive layout.
+   - For visual-risk changes, run local browser or screenshot verification when practical.
 
-## Rendering Contract
+## HTML Mapping Contract
 
-Experience cards render as:
+Use one token path everywhere:
 
-- `.job-date` from `dates.$value`
-- `.tag.fancy` from `tag.$value`
-- job heading from `title.$value`
-- first `<strong>` from `par1title.$value`
-- first paragraph from `par1info.$value`
-- second `<strong>` from `par2title.$value`
-- `<li>` items from parsed `par2info.$value`
+```html
+<span data-token="experience/optima/dates">апр 2024 — настоящее время</span>
+```
+
+Line breaks must be explicit:
+
+```html
+<h1 data-token="hero/title" data-token-preserve-br>...</h1>
+```
+
+Lists must be explicit:
+
+```html
+<ul data-token="experience/optima/par2info" data-token-list="bullet">...</ul>
+```
+
+Do not add `data-token` attributes as part of this skill unless the user explicitly asks to map HTML. Mapping during Figma section implementation belongs to `figma-section-implementation`.
 
 ## Stop Lines
 
 - Do not contact Figma or change Figma data.
 - Do not change `utils/content/token.json` unless the user explicitly asks to fix local content.
+- Do not bind Figma variables to text layers.
+- Do not hand-edit rendered text when `scripts/sync-html.js` can perform the sync.
 - If the user asks only for a report, use `content-audit` instead.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Figma Section Implementation"
+  short_description: "Implement and verify a Figma section in HTML/CSS"
+  default_prompt: "Use $figma-section-implementation to implement the requested Figma section or breakpoint."
