@@ -761,7 +761,7 @@ main > section {
 
   .jobs-section {
     width: 100%;
-    min-height: 1377px;
+    min-height: auto;
     padding: 64px 100px;
     background-color: var(--bg-color);
     display: flex;
@@ -945,7 +945,29 @@ main > section {
     align-items: flex-start;
     gap: 16px;
     background-color: #83d9e1;
-    box-shadow: 2px 2px 8px #1c0e03, inset -1px -1px 2px #474044, inset 2px 2px 4px #34222b;
+    box-shadow: 2px 2px 8px #1c0e03;
+  }
+
+  .skill-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 2px 2px 4px #34222b;
+    mix-blend-mode: color-dodge;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .skill-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset -1px -1px 2px #474044;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 1;
   }
 
   .skill-card:nth-child(1) {
@@ -1657,7 +1679,7 @@ main > section {
 
   .jobs-section {
     width: 100%;
-    min-height: 2026px;
+    min-height: auto;
     padding: 24px 20px;
     background-color: var(--bg-color);
     display: flex;
@@ -1827,8 +1849,30 @@ main > section {
     align-items: flex-start;
     gap: 16px;
     background-color: #83d9e1;
-    box-shadow: 2px 2px 8px #1c0e03, inset -1px -1px 2px #474044, inset 2px 2px 4px #34222b;
+    box-shadow: 2px 2px 8px #1c0e03;
     scroll-snap-align: start;
+  }
+
+  .skill-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 2px 2px 4px #34222b;
+    mix-blend-mode: color-dodge;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .skill-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset -1px -1px 2px #474044;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 1;
   }
 
   .skill-card:nth-child(1) {
@@ -2715,8 +2759,30 @@ main > section {
     align-items: flex-start;
     gap: 16px;
     background-color: #83d9e1;
-    box-shadow: 2px 2px 8px #1c0e03, inset -1px -1px 2px #474044, inset 2px 2px 4px #34222b;
+    box-shadow: 2px 2px 8px #1c0e03;
     scroll-snap-align: start;
+  }
+
+  .skill-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 2px 2px 4px #34222b;
+    mix-blend-mode: color-dodge;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .skill-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset -1px -1px 2px #474044;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 1;
   }
 
   .skill-card:nth-child(1) {
