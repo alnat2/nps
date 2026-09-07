@@ -42,6 +42,7 @@
   --borders-outline: #363636;
   --text-accent: #279e83;
   --header-bg: rgba(41, 25, 13, 0.5);
+  --header-height: 72px;
 }
 
 * {
@@ -52,7 +53,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 72px;
+  scroll-padding-top: var(--header-height);
   overflow-x: hidden;
   width: 100vw;
   scrollbar-width: none;
@@ -98,7 +99,7 @@ a {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 72px;
+  height: var(--header-height);
   z-index: 1000;
   background-color: transparent;
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
@@ -563,17 +564,10 @@ main > section {
 
 .case-title-mobile,
 .case-section .case-section-link-mobile,
-.jobs-link-mobile,
 .skills-title-mobile,
 .skills-section .skills-section-link-mobile,
 .contact-mobile-break,
 .case-bg-mobile {
-  display: none;
-}
-
-
-
-.contact-texture {
   display: none;
 }
 
@@ -1250,64 +1244,6 @@ main > section {
 
 /* RESPONSIVE */
 /* Tablet */
-@media (max-width: 1279px) {
-  .container {
-    max-width: 768px; /* 720 content + padding */
-    padding: 0 24px;
-  }
-
-  .hero-section {
-    height: auto;
-    padding-top: 0;
-  }
-  
-  .actions-menu {
-    display: none; /* Hide pill menu on tablet to use hamburger */
-  }
-  
-  .hamburger { display: flex; }
-  
-
-  .hero-container {
-    flex-direction: column;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    height: auto;
-    align-items: flex-start;
-  }
-
-  .hero-content {
-    position: static;
-    margin-top: 120px;
-  }
-  
-  .hero-avatar {
-    position: relative;
-    top: auto;
-    right: auto;
-    margin-top: 40px;
-    align-self: center;
-  }
-  
-  .hero-bg {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .hero-glowing-wrapper {
-    width: 100%;
-    height: 100%;
-    transform: none;
-  }
-
-  .hero-glowing-img {
-    position: static;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-/* Tablet */
 @media (min-width: 768px) and (max-width: 1279px) {
   .container {
     max-width: none;
@@ -1350,6 +1286,7 @@ main > section {
 
   .hero-section {
     height: 582px;
+    padding-top: 0;
   }
 
   .hero-container {
@@ -1464,14 +1401,12 @@ main > section {
   }
 
   .case-title-desktop,
-  .jobs-link-desktop,
   .skills-title-desktop {
     display: inline;
   }
 
   .case-title-mobile,
   .case-section .case-section-link-mobile,
-  .jobs-link-mobile,
   .skills-title-mobile,
   .skills-section .skills-section-link-mobile,
   .case-bg-mobile {
@@ -2176,22 +2111,21 @@ main > section {
     display: block !important;
   }
   
+  .actions-menu {
+    display: none;
+  }
+
   .contacts {
     display: none;
   }
 
   .hamburger {
+    display: flex;
     width: 44px;
     height: 44px;
     align-items: center;
     justify-content: center;
     margin-left: auto;
-  }
-  
-  .hero-buttons {
-    flex-direction: column;
-    width: 100%;
-    gap: 20px;
   }
   
   .btn {
@@ -2205,6 +2139,9 @@ main > section {
   }
   
   .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 72px;
     padding-bottom: 24px;
     gap: 8px;
@@ -2214,6 +2151,7 @@ main > section {
 
   .hero-section {
     height: 723px;
+    padding-top: 0;
   }
 
   .hero-bg {
@@ -2225,6 +2163,9 @@ main > section {
   }
   
   .hero-avatar {
+    position: relative;
+    top: auto;
+    right: auto;
     order: -1;
     width: 168px;
     height: 175px;
@@ -2247,6 +2188,7 @@ main > section {
   }
   
   .hero-content {
+    position: static;
     align-items: center;
     text-align: center;
     width: 100%;
@@ -2583,13 +2525,6 @@ main > section {
     white-space: nowrap;
   }
 
-  .jobs-link-desktop {
-    display: none;
-  }
-
-  .jobs-link-mobile {
-    display: inline;
-  }
 
   .timeline {
     width: 100%;
