@@ -44,6 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             event.preventDefault();
 
+            if (link.getAttribute('aria-disabled') === 'true') {
+                return;
+            }
+
             if (href === '#') {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 history.pushState(null, '', window.location.pathname + window.location.search);

@@ -363,7 +363,8 @@ main > section {
   left: 20px;
   display: flex;
   flex-direction: column;
-  width: 640px;
+  max-width: 709px;
+  width: 100%;
   gap: 48px;
 }
 
@@ -387,6 +388,8 @@ main > section {
   font-size: 28px;
   line-height: 1.3;
   color: var(--text-secondary);
+  max-width: 640px;
+  width: 100%;
   font-variation-settings: 'wdth' 105;
 }
 
@@ -397,7 +400,8 @@ main > section {
   font-size: 48px;
   line-height: 1.2;
   color: var(--text-primary);
-  width: 709px;
+  max-width: 709px;
+  width: 100%;
   font-variation-settings: 'wdth' 105;
 }
 
@@ -1105,7 +1109,8 @@ main > section {
   .contact-content {
     position: relative;
     z-index: 1;
-    width: 1440px;
+    max-width: 1440px;
+    width: 100%;
     min-height: 426px;
     flex: 0 0 auto;
     padding: 80px 100px;
@@ -1116,7 +1121,8 @@ main > section {
   }
 
   .contact-left {
-    width: 640px;
+    max-width: 640px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1125,7 +1131,8 @@ main > section {
   }
 
   .contact-left h2 {
-    width: 640px;
+    max-width: 640px;
+    width: 100%;
     margin: 0;
     color: var(--text-primary);
     font-size: 36px;
@@ -1135,7 +1142,8 @@ main > section {
   }
 
   .contact-left p {
-    width: 560px;
+    max-width: 560px;
+    width: 100%;
     margin: 0;
     color: var(--text-secondary);
     font-size: 16px;
@@ -1205,7 +1213,8 @@ main > section {
   .footer-bottom {
     position: relative;
     z-index: 1;
-    width: 1440px;
+    max-width: 1440px;
+    width: 100%;
     min-height: 68px;
     flex: 0 0 auto;
     padding: 24px 100px;
@@ -1324,7 +1333,8 @@ main > section {
   }
 
   .hero-subtitle {
-    width: 640px;
+    max-width: 640px;
+    width: 100%;
     height: 31px;
     font-size: 28px;
     font-weight: 300;
@@ -1334,8 +1344,8 @@ main > section {
   }
 
   .hero-title {
-    width: 536px;
-    max-width: none;
+    max-width: 536px;
+    width: 100%;
     font-size: 48px;
     font-weight: 800;
     line-height: 1.2;
@@ -1346,8 +1356,8 @@ main > section {
   }
 
   .hero-description {
-    width: 461px;
     max-width: 461px;
+    width: 100%;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
