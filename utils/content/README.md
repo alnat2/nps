@@ -1,171 +1,96 @@
-# Content Tokens
+# Content Sync
 
-`utils/content/token.json` is the local source of truth for text content in the project.
+Figma is the single source of truth for text content in this project.
 
-The content pipeline is:
-
-1. `utils/content/token.json`
-2. Figma text variables
-3. `index.html` and other rendered project files
-
-## File Location
-
-Canonical file:
+The active content pipeline is:
 
 ```txt
-utils/content/token.json
+Figma text variables -> project code
 ```
 
-All helper skills and content-sync logic live in:
+`utils/content/token.json` is not part of the active pipeline. Do not use it as
+an intermediate store or source for synchronization. `scripts/sync-html.js` is
+also legacy and must not be used for Figma-to-code updates.
+
+## Primary Design
+
+The desktop Figma layout is the primary design version.
+
+Use desktop to determine:
+
+- the canonical text value;
+- which Figma variable a code element maps to;
+- content order and structure when adaptive layouts differ;
+- intentional line breaks that affect the desktop layout.
+
+Tablet and mobile are adaptive representations. They may change layout and line
+breaks, but they do not override desktop content or define separate content
+tokens unless the Figma variable itself is explicitly breakpoint-specific.
+
+## Figma Variables
+
+Content comes from Figma string variables. A code mapping uses this path:
 
 ```txt
-utils/content/
-```
-
-## Token Shape
-
-Text tokens use a DTCG-like structure:
-
-```json
-{
-  "$type": "string",
-  "$value": "Работы",
-  "$description": "",
-  "$extensions": {
-    "mode": {}
-  }
-}
-```
-
-Only tokens with `"$type": "string"` and a string `$value` are synced as text content.
-
-## Collections
-
-Top-level keys are content collections.
-
-Example:
-
-```json
-{
-  "top-nav": {},
-  "hero": {},
-  "cases": {},
-  "experience": {},
-  "skills": {},
-  "contact": {},
-  "footer": {}
-}
-```
-
-Each top-level collection maps to a Figma variable collection with the same name.
-
-Nested JSON paths map to Figma variable names using `/`.
-
-Example:
-
-```json
-"top-nav": {
-  "menu": {
-    "item1": {
-      "$type": "string",
-      "$value": "Работы"
-    }
-  }
-}
-```
-
-maps to:
-
-```txt
-Figma collection: top-nav
-Figma variable: menu/item1
-```
-
-## Synced Collections
-
-The sync allowlist is stored in:
-
-```json
-"nps-content-sync": {
-  "source": "utils/content/token.json",
-  "target": "figma:variables",
-  "syncedCollections": [
-    "hero",
-    "top-nav",
-    "cases",
-    "experience",
-    "skills",
-    "contact",
-    "footer"
-  ]
-}
-```
-
-Only collections listed in `syncedCollections` should be synced to Figma and audited against rendered files.
-
-## Mapping Content
-
-Use one token path format everywhere:
-
-```txt
-collection/path/name
-```
-
-The same path is used for:
-
-```txt
-token.json key path
-Figma variable name
-HTML data-token value
+collection/variable/path
 ```
 
 Example:
-
-```html
-<span data-token="experience/optima/dates">апр 2024 — настоящее время</span>
-```
-
-maps to:
 
 ```txt
 Figma collection: experience
 Figma variable: optima/dates
-JSON token path: experience/optima/dates
+Code path: experience/optima/dates
 ```
 
-Use the desktop Figma variant as the reference when deciding which visible text maps to which token. Tablet and mobile text-layer binding is outside this pipeline.
+In HTML, keep the mapping explicit:
 
-Do the first mapping in small passes, not as one full-mockup operation. A good order is:
+```html
+<span data-token="experience/optima/dates">...</span>
+```
 
-1. Header / top navigation
-2. Hero
-3. Cases
-4. Experience
-5. Skills
-6. Contact / footer
+`data-token` is a code-side reference to a Figma variable. It is not a reference
+to JSON.
 
-For each pass:
+Do not infer mappings from matching text alone. If a Figma text layer is not
+bound to a variable or the intended variable is ambiguous, report the missing
+mapping instead of guessing.
 
-1. Pick one desktop section in Figma.
-2. Match visible desktop text to existing token paths.
-3. Add `data-token` attributes to the matching HTML elements.
-4. Use `data-token-preserve-br` only when existing `<br>` layout must be preserved.
-5. Use `data-token-list="bullet"` on `<ul>` / `<ol>` elements generated from multiline bullet tokens.
-6. Run the HTML sync/audit flow for that section before moving to the next one.
+## Rendering Rules
 
-Do not infer that every token must appear in every HTML file. Tokens that are unused in the current page are coverage information, not an error. A real error is an HTML `data-token` value that does not exist in `token.json`.
+Plain text replaces only the text owned by the mapped element. Preserve its
+classes, attributes, links, accessibility markup, and surrounding structure.
 
-## Updating Content
+Use `data-token-preserve-br` when code must preserve layout `<br>` elements:
 
-When text changes, update `utils/content/token.json` first.
+```html
+<h1 data-token="hero/title" data-token-preserve-br>...</h1>
+```
 
-Then run:
+Use `data-token-list="bullet"` when a Figma string contains bullet items that
+must render as list elements:
 
-1. `project-sync-content`
-   Updates `index.html` / rendered project files from JSON.
+```html
+<ul data-token="experience/optima/par2info" data-token-list="bullet">...</ul>
+```
 
-2. `figma-sync-content`
-   Updates Figma text variables from JSON.
+## Workflow
 
-3. `content-audit`
-   Checks that JSON, Figma variables, and rendered files are in sync.
+1. Update and approve text variables in the desktop Figma design.
+2. Run `figma-sync-content` to read those variables and update mapped code.
+3. Run `content-audit` to compare Figma variables with code without changing
+   either side.
+
+`project-sync-content` remains a process wrapper for a full project update. It
+uses the same direct Figma-to-code contract and does not introduce another
+content source.
+
+## Boundaries
+
+- Do not update content in JSON first.
+- Do not push code text back into Figma during normal synchronization.
+- Do not treat tablet or mobile text as canonical when desktop exists.
+- Do not require every Figma variable to appear on every page.
+- A code mapping that has no matching Figma variable is an error.
+- An unused Figma variable is coverage information unless the user asks for
+  cleanup.

@@ -1,4 +1,4 @@
 interface:
   display_name: "Project Sync Content"
-  short_description: "Render project JSON content into templates"
-  default_prompt: "Use $project-sync-content to update project templates from the content token file."
+  short_description: "Run project-wide Figma content sync"
+  default_prompt: "Use $project-sync-content to update mapped project content directly from Figma."

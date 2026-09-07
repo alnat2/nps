@@ -7,9 +7,9 @@ description: Implement a section or breakpoint from a Figma design into this sta
 
 ## Overview
 
-Implement one section or one breakpoint from Figma into the NPS static site while preserving the existing project structure. Treat Figma as the visual source of truth, project documentation as process guardrails, and local code as the delivery target.
+Implement one section or one breakpoint from Figma into the NPS static site while preserving the existing project structure. Treat Figma as the source of truth for both visuals and text content, project documentation as process guardrails, and local code as the delivery target.
 
-This skill is for layout and visual implementation. It must also perform the first HTML token mapping for newly implemented text. For later text synchronization, use `content-audit`, `figma-sync-content`, or `project-sync-content`.
+This skill is for layout and visual implementation. It must also perform the first code mapping from Figma variables for newly implemented text. For later text synchronization, use `figma-sync-content`; use `content-audit` for read-only verification.
 
 ## Communication Contract
 
@@ -64,27 +64,27 @@ When Figma assets are needed:
 - Do not recreate Figma SVG/icon art with ad hoc HTML tags when a real asset exists.
 - Keep desktop-only, tablet-only, or mobile-only assets scoped to their breakpoints.
 
-### 4. Map Content Tokens
+### 4. Map Figma Content Variables
 
-When implementing new text from Figma, add the initial HTML binding at the same time as the markup:
+When implementing new text from Figma, add the initial code mapping at the same time as the markup:
 
-- Use the desktop Figma variant as the reference for deciding which visible text maps to which token.
-- Read `utils/content/token.json` before mapping text.
-- Match visible Figma text to existing token paths using the shared format `collection/path/name`.
-- Add `data-token="collection/path/name"` to the HTML element that owns that text.
+- Use the desktop Figma variant as the canonical reference for content and mapping.
+- Read the string variable bound to each desktop text layer.
+- Map the Figma collection and variable name using the shared path `collection/variable/path`.
+- Add `data-token="collection/variable/path"` to the HTML element that owns that text.
 - Use `data-token-preserve-br` when an existing or Figma-required line break is part of layout.
-- Use `data-token-list="bullet"` on `<ul>` or `<ol>` when a multiline bullet token renders list items.
-- If the text does not have a matching token, do not invent one silently. Note that the JSON source needs a new token before the content can be synced.
+- Use `data-token-list="bullet"` on `<ul>` or `<ol>` when a multiline Figma variable renders list items.
+- If a desktop text layer is not bound to a variable, do not invent a mapping or match by text. Report that the Figma binding is missing.
 - If the same semantic text appears in tablet or mobile HTML for the requested work, use the same `data-token` path there too.
 
-This mapping is HTML binding only. Do not bind Figma variables to Figma text layers.
+This step maps existing Figma variables into code. Do not create or change Figma text-layer bindings unless the user explicitly includes that work.
 
 ### 5. Implement Narrowly
 
 Change only what the requested section needs:
 
 - Preserve existing section wrappers and navigation anchors.
-- Keep text content in the current project source of truth. If the text is tokenized, do not hand-edit rendered text unless the user asks.
+- Take text content from Figma variables. Do not use local JSON or current rendered text as the canonical value.
 - Keep layout, spacing, visual styling, and responsive behavior in CSS.
 - Avoid broad refactors, breakpoint rewrites, or architecture changes during section implementation.
 - Avoid fixed heights unless Figma requires a fixed visual frame and content overflow is intentionally controlled.
@@ -129,7 +129,7 @@ Keep the final report short:
 - Do not mutate files when the user only asks a question.
 - Do not add new documentation, scripts, or architecture unless the user asks or approves it.
 - Do not create new content-sync mechanisms while implementing layout; use the content sync skills instead.
-- Do not skip initial HTML `data-token` mapping for newly implemented text when matching tokens exist.
-- Do not bind Figma variables to Figma text layers.
+- Do not skip initial code `data-token` mapping when the desktop Figma text layer has a variable binding.
+- Do not create or change Figma variables or text-layer bindings unless the user explicitly asks.
 - Do not commit unless the user explicitly asks for a commit.
 - Do not include unrelated dirty files in a commit.

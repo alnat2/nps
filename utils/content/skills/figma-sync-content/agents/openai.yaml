@@ -1,4 +1,4 @@
 interface:
   display_name: "Figma Sync Content"
-  short_description: "Push project JSON content tokens into Figma variables"
-  default_prompt: "Use $figma-sync-content to sync project content tokens from utils/content/token.json into Figma variables."
+  short_description: "Sync Figma text variables directly into code"
+  default_prompt: "Use $figma-sync-content to update mapped project code directly from Figma text variables."
