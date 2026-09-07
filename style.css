@@ -905,7 +905,7 @@ main > section {
 
   .skills-section {
     width: 100%;
-    min-height: 488px;
+    min-height: auto;
     padding: 64px 100px;
     background-color: var(--bg-color);
     display: flex;
@@ -916,7 +916,11 @@ main > section {
   }
 
   .skills-section .section-header {
+    width: 1240px;
     height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-shrink: 0;
   }
 
@@ -940,24 +944,24 @@ main > section {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    background-color: #f2e9ce;
-    background-image: url('assets/images/skill-card-noise.webp');
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: luminosity;
-    box-shadow: 2px 2px 8px #1c0e03;
+    background-color: #83d9e1;
+    box-shadow: 2px 2px 8px #1c0e03, inset -1px -1px 2px #474044, inset 2px 2px 4px #34222b;
+  }
+
+  .skill-card:nth-child(1) {
+    background-color: #83d9e1;
   }
 
   .skill-card:nth-child(2) {
-    background-color: #ffe3d3;
+    background-color: #99dab5;
   }
 
   .skill-card:nth-child(3) {
-    background-color: #d2eeff;
+    background-color: #e4c489;
   }
 
   .skill-card:nth-child(4) {
-    background-color: #d9f1dc;
+    background-color: #f7b89a;
   }
 
   .skill-card h3,
@@ -966,35 +970,18 @@ main > section {
     z-index: 2;
   }
 
-  .skill-card-shadow {
-    position: absolute;
-    inset: 0;
-    z-index: 4;
-    border-radius: inherit;
-    pointer-events: none;
-  }
-
-  .skill-card-shadow-multiply {
-    box-shadow: inset -1px -1px 2px #474044;
-    mix-blend-mode: multiply;
-  }
-
-  .skill-card-shadow-dodge {
-    box-shadow: inset 2px 2px 4px rgba(255, 172, 213, 0.6);
-    mix-blend-mode: color-dodge;
-  }
-
   .skill-card h3 {
-    width: 255px;
+    width: 100%;
     margin: 0;
     color: var(--text-invert);
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 28px;
+    font-weight: 700;
     line-height: 1.3;
+    font-variation-settings: 'wdth' 105;
   }
 
   .skill-card .tags {
-    width: 255px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -1016,6 +1003,7 @@ main > section {
     line-height: 1;
     text-shadow: none;
     white-space: nowrap;
+    font-variation-settings: 'wdth' 105;
   }
 
   .skill-decor {
@@ -1025,7 +1013,7 @@ main > section {
     bottom: -43px;
     width: 240px;
     height: 240px;
-    opacity: 0.75;
+    opacity: 0.3;
     mix-blend-mode: color-burn;
     object-fit: cover;
     pointer-events: none;
@@ -1035,21 +1023,23 @@ main > section {
     width: 1240px;
     min-height: 51px;
     margin-top: 8px;
-    padding: 12px 16px;
+    padding: 12px 24px;
     border-radius: 16px;
-    background-color: #342519;
+    background-color: #292929;
+    box-shadow: 4px 4px 12px 0px #160c04, inset -1px -1px 2px 0px #181514, inset 1px 1px 1px 0px rgba(255, 255, 255, 0.05), inset 2px 2px 1px 0px rgba(255, 255, 255, 0.05);
     display: flex;
     align-items: center;
+    gap: 16px;
     overflow: hidden;
     flex-shrink: 0;
   }
 
   .lang-row strong {
     flex: 0 0 auto;
-    margin-right: 16px;
+    margin-right: 0;
     color: var(--text-primary);
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.5;
   }
 
@@ -1796,7 +1786,7 @@ main > section {
 
   .skills-section {
     width: 100%;
-    min-height: 435px;
+    min-height: auto;
     padding: 24px 20px;
     background-color: var(--bg-color);
     display: flex;
@@ -1836,25 +1826,25 @@ main > section {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    background-color: #f2e9ce;
-    background-image: url('assets/images/skill-card-noise.webp');
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: luminosity;
-    box-shadow: 2px 2px 8px #1c0e03;
+    background-color: #83d9e1;
+    box-shadow: 2px 2px 8px #1c0e03, inset -1px -1px 2px #474044, inset 2px 2px 4px #34222b;
     scroll-snap-align: start;
   }
 
+  .skill-card:nth-child(1) {
+    background-color: #83d9e1;
+  }
+
   .skill-card:nth-child(2) {
-    background-color: #ffe3d3;
+    background-color: #99dab5;
   }
 
   .skill-card:nth-child(3) {
-    background-color: #d2eeff;
+    background-color: #e4c489;
   }
 
   .skill-card:nth-child(4) {
-    background-color: #d9f1dc;
+    background-color: #f7b89a;
   }
 
   .skill-card h3,
@@ -1864,16 +1854,17 @@ main > section {
   }
 
   .skill-card h3 {
-    width: 300px;
+    width: 100%;
     margin: 0;
     color: var(--text-invert);
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.3;
+    font-variation-settings: 'wdth' 105;
   }
 
   .skill-card .tags {
-    width: 300px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -1882,7 +1873,7 @@ main > section {
 
   .skill-card .tag {
     min-height: 34px;
-    padding: 0 16px;
+    padding: 8px 16px;
     border-radius: 40px;
     background-color: rgba(0, 0, 0, 0.1);
     box-shadow: inset 0 0 2px rgba(108, 93, 101, 0.3);
@@ -1893,9 +1884,9 @@ main > section {
     font-size: 18px;
     font-weight: 500;
     line-height: 1;
-    text-align: center;
     text-shadow: none;
     white-space: nowrap;
+    font-variation-settings: 'wdth' 105;
   }
 
   .skill-decor {
@@ -1905,49 +1896,33 @@ main > section {
     bottom: -43px;
     width: 240px;
     height: 240px;
-    opacity: 0.75;
+    opacity: 0.3;
     mix-blend-mode: color-burn;
     object-fit: cover;
     pointer-events: none;
   }
 
-  .skill-card-shadow {
-    position: absolute;
-    inset: 0;
-    z-index: 4;
-    border-radius: inherit;
-    pointer-events: none;
-  }
-
-  .skill-card-shadow-multiply {
-    box-shadow: inset -1px -1px 2px #474044;
-    mix-blend-mode: multiply;
-  }
-
-  .skill-card-shadow-dodge {
-    box-shadow: inset 2px 2px 4px rgba(255, 172, 213, 0.6);
-    mix-blend-mode: color-dodge;
-  }
-
   .skills-section .lang-row {
     width: min(760px, 100%);
-    min-height: 78px;
+    min-height: 51px;
     margin-top: 8px;
-    padding: 12px 16px;
+    padding: 12px 24px;
     border-radius: 16px;
-    background-color: #342519;
+    background-color: #292929;
+    box-shadow: 4px 4px 12px 0px #160c04, inset -1px -1px 2px 0px #181514, inset 1px 1px 1px 0px rgba(255, 255, 255, 0.05), inset 2px 2px 1px 0px rgba(255, 255, 255, 0.05);
     display: flex;
     align-items: center;
+    gap: 16px;
     overflow: hidden;
     flex-shrink: 0;
   }
 
   .skills-section .lang-row strong {
     flex: 0 0 auto;
-    margin-right: 16px;
+    margin-right: 0;
     color: var(--text-primary);
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.5;
   }
 
@@ -2691,10 +2666,10 @@ main > section {
 
   .skills-section .section-header {
     width: 100%;
-    height: 40px;
+    height: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     overflow: hidden;
     flex-shrink: 0;
   }
@@ -2702,29 +2677,17 @@ main > section {
   .skills-section .section-title {
     margin: 0;
     color: var(--text-primary);
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
     line-height: 1.2;
     white-space: nowrap;
-  }
-
-  .skills-title-desktop {
-    display: none;
-  }
-
-  .skills-title-mobile {
-    display: inline;
-  }
-
-  .skills-section .skills-section-link-mobile {
-    display: none;
+    font-variation-settings: 'wdth' 105;
   }
 
   .skills-grid {
     width: 100%;
     min-height: 254px;
     display: flex;
-    /* grid not used here; flexbox handles layout */
     gap: 20px;
     align-items: stretch;
     overflow-x: auto;
@@ -2751,42 +2714,43 @@ main > section {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    background-color: #f2e9ce;
-    background-image: url('assets/images/skill-card-noise.webp');
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: luminosity;
-    box-shadow: 2px 2px 8px #1c0e03;
+    background-color: #83d9e1;
+    box-shadow: 2px 2px 8px #1c0e03, inset -1px -1px 2px #474044, inset 2px 2px 4px #34222b;
     scroll-snap-align: start;
   }
 
+  .skill-card:nth-child(1) {
+    background-color: #83d9e1;
+  }
+
   .skill-card:nth-child(2) {
-    background-color: #ffe3d3;
+    background-color: #99dab5;
   }
 
   .skill-card:nth-child(3) {
-    background-color: #d2eeff;
+    background-color: #e4c489;
   }
 
   .skill-card:nth-child(4) {
-    background-color: #d9f1dc;
+    background-color: #f7b89a;
   }
 
   .skill-card h3 {
     position: relative;
     z-index: 2;
-    width: 240px;
+    width: 100%;
     margin: 0;
     color: var(--text-invert);
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 24px;
+    font-weight: 700;
     line-height: 1.3;
+    font-variation-settings: 'wdth' 105;
   }
 
   .skill-card .tags {
     position: relative;
     z-index: 2;
-    width: 240px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -2795,7 +2759,7 @@ main > section {
 
   .skill-card .tag {
     min-height: 34px;
-    padding: 0 16px;
+    padding: 8px 16px;
     border-radius: 40px;
     background-color: rgba(0, 0, 0, 0.1);
     box-shadow: inset 0 0 2px rgba(108, 93, 101, 0.3);
@@ -2806,9 +2770,9 @@ main > section {
     font-size: 18px;
     font-weight: 500;
     line-height: 1;
-    text-align: center;
     text-shadow: none;
     white-space: nowrap;
+    font-variation-settings: 'wdth' 105;
   }
 
   .skill-decor {
@@ -2818,49 +2782,33 @@ main > section {
     bottom: -27px;
     width: 200px;
     height: 200px;
-    opacity: 0.75;
+    opacity: 0.3;
     mix-blend-mode: color-burn;
     object-fit: cover;
     pointer-events: none;
   }
 
-  .skill-card-shadow {
-    position: absolute;
-    inset: 0;
-    z-index: 4;
-    border-radius: inherit;
-    pointer-events: none;
-  }
-
-  .skill-card-shadow-multiply {
-    box-shadow: inset -1px -1px 2px #474044;
-    mix-blend-mode: multiply;
-  }
-
-  .skill-card-shadow-dodge {
-    box-shadow: inset 2px 2px 4px rgba(255, 172, 213, 0.6);
-    mix-blend-mode: color-dodge;
-  }
-
   .skills-section .lang-row {
     width: 100%;
-    min-height: 144px;
+    min-height: auto;
     margin-top: 12px;
     padding: 12px 16px;
     border-radius: 16px;
-    background-color: #342519;
+    background-color: #292929;
+    box-shadow: 4px 4px 12px 0px #160c04, inset -1px -1px 2px 0px #181514, inset 1px 1px 1px 0px rgba(255, 255, 255, 0.05), inset 2px 2px 1px 0px rgba(255, 255, 255, 0.05);
     display: flex;
     align-items: center;
+    gap: 16px;
     overflow: hidden;
     flex-shrink: 0;
   }
 
   .skills-section .lang-row strong {
-    flex: 0 0 51px;
-    margin-right: 16px;
+    flex: 0 0 auto;
+    margin-right: 0;
     color: var(--text-primary);
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.5;
   }
 
@@ -3247,9 +3195,12 @@ main > section {
   }
 
   .job-desc strong,
-  .skills-section .lang-row strong,
   .contact-left p {
     font: var(--text-lg-body-medium);
+  }
+
+  .skills-section .lang-row strong {
+    font: 600 18px/1.5 var(--font-family-base);
   }
 
   .jobs-section .tag.fancy {
@@ -3312,9 +3263,12 @@ main > section {
     font: var(--text-sm-body-strong);
   }
 
-  .skills-section .lang-row strong,
   .contact-left p {
     font: var(--text-sm-body-medium);
+  }
+
+  .skills-section .lang-row strong {
+    font: 600 16px/1.5 var(--font-family-base);
   }
 
   .jobs-section .tag.fancy {
