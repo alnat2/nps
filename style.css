@@ -1099,7 +1099,7 @@ main > section {
     left: calc(50% - 720px + 840px);
     z-index: 0;
     display: block;
-    width: 600px;
+    width: 730px;
     height: 495px;
     pointer-events: none;
     max-width: none;
