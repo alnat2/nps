@@ -31,7 +31,7 @@
   --text-sm-caption: 400 13px/1.4 var(--font-family-base);
   --text-sm-tag: 400 14px/1.4 var(--font-family-base);
   --text-sm-footnote: 400 12px/1.4 var(--font-family-base);
-  --bg-color: #29190d;
+  --bg-color: #211d1d;
   --text-primary: #e1e1e1;
   --text-secondary: #a8a7a7;
   --text-invert: #0f2832;
@@ -1075,7 +1075,7 @@ main > section {
     position: relative;
     width: 100%;
     min-height: 495px;
-    background-color: #211d1d;
+    background-color: var(--bg-color);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -1985,7 +1985,7 @@ main > section {
     width: 100%;
     min-height: 375px;
     padding: 0 20px;
-    background-color: #211d1d;
+    background-color: var(--bg-color);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -2898,7 +2898,7 @@ main > section {
     width: 100%;
     min-height: 509px;
     padding: 20px 16px;
-    background-color: #211d1d;
+    background-color: var(--bg-color);
     overflow: hidden;
     display: flex;
     flex-direction: column;
