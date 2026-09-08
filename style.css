@@ -816,6 +816,40 @@ main > section {
     max-width: none;
   }
 
+  /* WORKS CASES (DESKTOP) */
+  .works-cases-section {
+    position: relative;
+    width: 100%;
+  }
+
+  .works-cases-container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .works-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+  }
+
+  .works-cases-grid .case-card {
+    width: 100%;
+    max-width: none;
+    flex: none;
+    min-height: 450px;
+  }
+
+  .works-cases-grid .case-text h3 {
+    max-width: none;
+    min-height: 2.6em;
+  }
+
+  .works-cases-grid .case-text p {
+    max-width: none;
+  }
+
   .jobs-section {
     width: 100%;
     min-height: auto;
@@ -1600,6 +1634,22 @@ main > section {
     max-width: none;
   }
 
+  /* Works Cases Tablet */
+  .works-cases-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .works-cases-grid .case-card {
+    width: 100%;
+    flex: none;
+    min-height: 450px;
+  }
+
+  .works-cases-grid .case-text h3 {
+    min-height: auto;
+  }
+
   .jobs-section {
     width: 100%;
     min-height: auto;
@@ -2124,6 +2174,26 @@ main > section {
   .case-card-featured {
     width: 100%;
     flex: 0 0 auto;
+  }
+
+  /* Works Cases Mobile */
+  .works-cases-container {
+    padding-bottom: 24px;
+  }
+
+  .works-cases-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .works-cases-grid .case-card {
+    width: 100%;
+    flex: none;
+    min-height: 420px;
+  }
+
+  .works-cases-grid .case-text h3 {
+    min-height: auto;
   }
 
   .jobs-section {
