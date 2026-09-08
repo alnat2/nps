@@ -2108,7 +2108,7 @@ main > section {
 
   .case-content {
     width: 100%;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .case-card .tag {
@@ -2118,8 +2118,8 @@ main > section {
 
   .case-text {
     width: 100%;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .case-text h3,
