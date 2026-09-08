@@ -245,7 +245,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 288px;
+  height: auto;
   background-color: var(--cards-bg-primary);
   z-index: 999;
   display: flex;
@@ -269,8 +269,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  height: 144px;
+  gap: 24px;
   overflow: hidden;
 }
 
