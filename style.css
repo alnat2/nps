@@ -676,6 +676,11 @@ main > section {
   }
 
   .tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
     min-height: 24px;
     padding: 2px 16px;
     border-radius: 40px;
@@ -754,6 +759,61 @@ main > section {
   .case-btn-icon img {
     width: 24px;
     height: 24px;
+  }
+
+  /* WORKS HERO (DESKTOP) */
+  .works-hero-section {
+    position: relative;
+    width: 100%;
+    padding-top: var(--header-height);
+  }
+
+  .works-hero-container {
+    padding-top: 64px;
+    padding-bottom: 20px;
+  }
+
+  .works-hero-info {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    width: 100%;
+  }
+
+  .works-hero-headers {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .works-hero-title {
+    margin: 0;
+    font: var(--text-lg-hero-title);
+    font-variation-settings: 'wdth' 105;
+    color: var(--text-primary);
+    max-width: 709px;
+    text-align: left;
+  }
+
+  .works-hero-subtitle {
+    margin: 0;
+    font: var(--text-lg-hero-body);
+    font-variation-settings: 'wdth' 100;
+    color: var(--text-secondary);
+    max-width: 586px;
+    text-align: left;
+  }
+
+  .case-card-featured {
+    width: 100%;
+    max-width: 1240px;
+    flex: 0 0 auto;
+  }
+
+  .case-card-featured .case-text h3 {
+    max-width: none;
   }
 
   .jobs-section {
@@ -1524,6 +1584,22 @@ main > section {
     color: #c4c3c2;
   }
 
+  /* Works Hero Tablet */
+  .works-hero-container {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .works-hero-info {
+    gap: 32px;
+  }
+
+  .case-card-featured {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: none;
+  }
+
   .jobs-section {
     width: 100%;
     min-height: auto;
@@ -1979,7 +2055,7 @@ main > section {
 
   .case-card .tag {
     min-width: 0;
-    flex: 1 1 0;
+    flex: 1 1 auto;
   }
 
   .case-text {
@@ -2010,6 +2086,44 @@ main > section {
     width: 100%;
     justify-content: center;
     align-self: stretch;
+  }
+
+  /* Works Hero Mobile */
+  .works-hero-container {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+
+  .works-hero-info {
+    gap: 36px;
+    align-items: center;
+  }
+
+  .works-hero-headers {
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .works-hero-title {
+    font: var(--text-sm-h1);
+    font-variation-settings: 'wdth' 105;
+    text-align: center;
+    max-width: none;
+    width: 100%;
+  }
+
+  .works-hero-subtitle {
+    font: var(--text-sm-body-prominent);
+    font-variation-settings: 'wdth' 100;
+    text-align: center;
+    max-width: none;
+    width: 100%;
+  }
+
+  .case-card-featured {
+    width: 100%;
+    flex: 0 0 auto;
   }
 
   .jobs-section {
