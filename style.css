@@ -2515,11 +2515,13 @@ main > section {
   .case-short-info {
     min-height: 312px;
     padding: 20px 24px;
+    align-items: flex-start;
   }
 
   .short-info-items {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 16px;
     padding: 0;
     width: 100%;
@@ -2527,6 +2529,8 @@ main > section {
 
   .informer {
     grid-template-columns: 20px auto;
+    justify-items: start;
+    text-align: left;
   }
 
   .informer-icon {
@@ -2536,10 +2540,12 @@ main > section {
 
   .informer-title {
     font-size: 24px;
+    text-align: left;
   }
 
   .informer-subtitle {
     font-size: 14px;
+    text-align: left;
   }
 
   /* Scase Story Mobile */
