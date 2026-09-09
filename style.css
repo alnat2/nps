@@ -877,6 +877,80 @@ main > section {
     text-align: left;
   }
 
+  /* SCASE SHORT INFO (DESKTOP) */
+  .case-short-info {
+    position: relative;
+    width: 100%;
+    max-width: 1240px;
+    background-color: var(--cards-bg-primary);
+    border-radius: 32px;
+    padding: 12px 24px;
+    min-height: 104px;
+    display: flex;
+    align-items: center;
+    box-shadow: 4px 4px 12px 0px #160c04;
+    overflow: hidden;
+  }
+
+  .short-info-items {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  .informer {
+    display: grid;
+    grid-template-columns: 24px auto;
+    grid-template-rows: auto auto;
+    column-gap: 8px;
+    row-gap: 4px;
+    flex-shrink: 0;
+  }
+
+  .informer-icon {
+    grid-column: 1;
+    grid-row: 1;
+    width: 24px;
+    height: 24px;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .informer-icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .informer-title {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    font-family: var(--font-family);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+    font-variation-settings: 'wdth' 105;
+    color: var(--text-primary);
+    white-space: nowrap;
+  }
+
+  .informer-subtitle {
+    grid-column: 2;
+    grid-row: 2;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    font-variation-settings: 'wdth' 100;
+    color: var(--text-secondary);
+    white-space: nowrap;
+  }
+
   /* WORKS CASES (DESKTOP) */
   .works-cases-section {
     position: relative;
@@ -1728,6 +1802,20 @@ main > section {
     font-variation-settings: 'wdth' 105;
   }
 
+  /* Scase Short Info Tablet */
+  .case-short-info {
+    min-height: 200px;
+    padding: 12px 24px;
+  }
+
+  .short-info-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+    row-gap: 32px;
+    padding: 8px 0;
+  }
+
   /* Works Cases Tablet */
   .works-cases-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -2285,6 +2373,37 @@ main > section {
     font: var(--text-sm-h3);
     font-variation-settings: 'wdth' 105;
     text-align: left;
+  }
+
+  /* Scase Short Info Mobile */
+  .case-short-info {
+    min-height: 312px;
+    padding: 20px 24px;
+  }
+
+  .short-info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .informer {
+    grid-template-columns: 20px auto;
+  }
+
+  .informer-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .informer-title {
+    font-size: 24px;
+  }
+
+  .informer-subtitle {
+    font-size: 14px;
   }
 
   /* Works Cases Mobile */
