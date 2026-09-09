@@ -1628,7 +1628,8 @@ main > section {
     width: auto;
   }
 
-  .scase-page .actions-menu {
+  .scase-page .actions-menu,
+  .cpro-page .actions-menu {
     width: auto;
   }
 
