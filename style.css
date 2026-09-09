@@ -1379,6 +1379,10 @@ main > section {
     width: auto;
   }
 
+  .scase-page .actions-menu {
+    width: auto;
+  }
+
   .contacts {
     display: flex;
     flex-shrink: 0;

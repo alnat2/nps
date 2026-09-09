@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="КредитПро - Финансовый маркетплейс. Кейс UX/UI дизайнера Александра Белоглазкина.">
+    <title>КредитПро — Александр Белоглазкин</title>
+    <link rel="stylesheet" href="style.css?v=20260909">
+</head>
+<body class="scase-page">
+    <!-- TOPNAV HEADER -->
+    <header id="header" class="header-wrapper">
+        <div class="container top-nav">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.svg" alt="АБ" class="logo-img">
+            </a>
+            
+            <nav class="actions-menu desktop-only">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="works.html" class="nav-link">Все работы</a>
+                <a href="assets/cv-alexander-beloglazkin.pdf" class="nav-link highlight" target="_blank" data-token="menu/resume">Скачать резюме</a>
+            </nav>
+
+            <div class="contacts">
+                <a href="mailto:alex.beloglazkin@gmail.com" class="contact-item">
+                    <span class="contact-text" data-token="contact/mail-label">Почта</span>
+                    <img src="assets/images/mail.svg" alt="Mail" />
+                </a>
+                <a href="https://t.me/alnat2" class="contact-item" target="_blank">
+                    <span class="contact-text" data-token="contact/telegram-label">Телеграм</span>
+                    <img src="assets/images/telegram.svg" alt="Telegram" />
+                </a>
+            </div>
+
+            <button class="hamburger" aria-label="Открыть меню" aria-controls="mobile-menu" aria-expanded="false">
+                <svg class="menu-icon-animated" width="36" height="29" viewBox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path class="top-line" d="M34.5 1 L1.5 1" stroke="#E1E1E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="middle-line" d="M34.5 14.2 L12.5 14.2" stroke="#E1E1E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="bottom-line" d="M27 27.2 L1 27.2" stroke="#E1E1E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <nav class="mobile-nav">
+            <a href="index.html" class="nav-link">Главная</a>
+            <a href="works.html" class="nav-link">Все работы</a>
+            <a href="assets/cv-alexander-beloglazkin.pdf" class="nav-link highlight" target="_blank" data-token="menu/resume">Скачать резюме</a>
+        </nav>
+        <div class="mobile-menu-contacts">
+            <a href="mailto:alex.beloglazkin@gmail.com" class="mobile-menu-contact">
+                <span data-token="contact/mail-label">Почта</span>
+                <img src="assets/images/mail.svg" alt="" aria-hidden="true">
+            </a>
+            <a href="https://t.me/alnat2" class="mobile-menu-contact" target="_blank">
+                <span data-token="contact/telegram-label">Телеграм</span>
+                <img src="assets/images/telegram.svg" alt="" aria-hidden="true">
+            </a>
+        </div>
+    </div>
+
+    <main>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
