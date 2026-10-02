@@ -37,6 +37,7 @@
   --text-invert: #0f2832;
   --accent-color: #e2a028;
   --btn-bg-prim: #e2a028;
+  --btn-bg-promo: #f5f2e8;
   --btn-bg-secondary: #29190d;
   --cards-bg-primary: #292929;
   --borders-outline: #363636;
@@ -625,9 +626,9 @@ main > section {
 
   .case-card {
     position: relative;
-    width: 800px;
+    width: 610px;
     min-height: 450px;
-    flex: 0 0 800px;
+    flex: 0 0 610px;
     padding: 20px;
     border-radius: 32px;
     display: flex;
@@ -637,8 +638,8 @@ main > section {
   }
 
   .case-card.card-small {
-    width: 420px;
-    flex-basis: 420px;
+    width: 610px;
+    flex-basis: 610px;
   }
 
   .case-card::after {
@@ -647,7 +648,7 @@ main > section {
     inset: 0;
     z-index: 2;
     border-radius: inherit;
-    box-shadow: inset 1px 1px 2px 0 #6fd6be;
+    box-shadow: inset 1px 1px 2px 0 #5aa695;
     pointer-events: none;
   }
 
@@ -700,9 +701,9 @@ main > section {
   }
 
   .case-text h3 {
-    max-width: 760px;
+    max-width: 570px;
     margin: 0;
-    color: #f2f2f7;
+    color: var(--text-primary);
     font-size: 28px;
     font-weight: 700;
     line-height: 1.3;
@@ -710,13 +711,13 @@ main > section {
   }
 
   .card-small .case-text h3 {
-    max-width: 380px;
+    max-width: 570px;
   }
 
   .case-text p {
-    max-width: 760px;
+    max-width: 570px;
     margin: 0;
-    color: #bebebe;
+    color: var(--text-primary);
     font-size: 18px;
     font-weight: 400;
     line-height: 1.5;
@@ -724,23 +725,24 @@ main > section {
   }
 
   .card-small .case-text p {
-    max-width: 380px;
-    color: #c4c3c2;
+    max-width: 570px;
+    color: var(--text-primary);
   }
 
   .case-btn {
     position: relative;
     z-index: 1;
-    min-height: 42px;
+    min-height: 40px;
     padding: 0 8px 0 16px;
-    border: 1px solid rgba(0, 0, 0, 0.75);
+    border: none;
     border-radius: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--btn-bg-promo);
+    box-shadow: inset 1px 1px 2px 0px #fffefc, 1px 1px 1.5px 0px #b4b4b4;
     display: flex;
     align-items: center;
     align-self: flex-start;
     gap: 8px;
-    color: var(--text-primary);
+    color: var(--text-invert);
     font-size: 18px;
     font-weight: 500;
     line-height: 1;
@@ -877,6 +879,10 @@ main > section {
     text-align: left;
   }
 
+  .scase-banner-card .tags:empty {
+    min-height: 24px;
+  }
+
   /* SCASE SHORT INFO (DESKTOP) */
   .case-short-info {
     position: relative;
@@ -951,6 +957,20 @@ main > section {
     white-space: nowrap;
   }
 
+  a.informer {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+  }
+
+  a.informer:hover {
+    opacity: 0.85;
+  }
+
+  a.informer:hover .informer-title {
+    text-decoration: underline;
+  }
+
   /* SCASE STORY (DESKTOP) */
   .scase-story-section {
     position: relative;
@@ -967,7 +987,7 @@ main > section {
   .case-story {
     display: flex;
     gap: 40px;
-    align-items: flex-start;
+    align-items: stretch;
     width: 100%;
     max-width: 1240px;
   }
@@ -1063,6 +1083,20 @@ main > section {
     font: var(--text-lg-body);
     font-variation-settings: 'wdth' 100;
     color: var(--text-primary);
+  }
+
+  /* CreditPro Case Styles */
+  body.cpro-page .scase-banner-card::after {
+    box-shadow: inset 1px 1px 2px 0 #c0a0e5;
+  }
+
+  body.cpro-page .scase-banner-card .case-text h2 {
+    text-shadow: 1px 1px 2px #5f3198;
+  }
+
+  body.cpro-page .case-process-card {
+    background: #562592;
+    box-shadow: inset 1px 1px 2px 0px #c0a0e5;
   }
 
   /* WORKS CASES (DESKTOP) */
@@ -1769,6 +1803,16 @@ main > section {
     display: block;
   }
 
+  .cases-grid .case-bg-mobile,
+  .works-cases-grid .case-bg-mobile {
+    display: block;
+  }
+
+  .cases-grid .case-bg-desktop,
+  .works-cases-grid .case-bg-desktop {
+    display: none;
+  }
+
   .case-section {
     width: 100%;
     min-height: 562px;
@@ -1858,7 +1902,7 @@ main > section {
   }
 
   .card-small .case-text p {
-    color: #c4c3c2;
+    color: var(--text-primary);
   }
 
   /* Works Hero Tablet */
@@ -2415,7 +2459,7 @@ main > section {
   }
 
   .card-small .case-text p {
-    color: var(--text-secondary);
+    color: var(--text-primary);
   }
 
   .case-btn {
