@@ -1838,8 +1838,7 @@ main > section {
   }
 
   .case-section .section-header,
-  .jobs-section .section-header,
-  .skills-section .section-header {
+  .jobs-section .section-header {
     width: min(760px, 100%);
     height: 40px;
     display: flex;
@@ -1849,12 +1848,29 @@ main > section {
     flex-shrink: 0;
   }
 
+  .skills-section .section-header {
+    width: min(760px, 100%);
+    height: auto;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: visible;
+    flex-shrink: 0;
+  }
+
   .case-section .section-title,
-  .jobs-section .section-title,
-  .skills-section .section-title {
+  .jobs-section .section-title {
     margin: 0;
     color: var(--text-primary);
     white-space: nowrap;
+  }
+
+  .skills-section .section-title {
+    margin: 0;
+    color: var(--text-primary);
+    white-space: normal;
+    overflow-wrap: break-word;
   }
 
   .case-section .section-link,
@@ -2792,18 +2808,24 @@ main > section {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    overflow: hidden;
+    overflow: visible;
     flex-shrink: 0;
   }
 
   .skills-section .section-title {
     margin: 0;
     color: var(--text-primary);
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: break-word;
   }
 
   .skills-grid {
-    width: 100%;
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-right: -16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    scroll-padding-inline: 16px;
     min-height: 254px;
     display: flex;
     gap: 20px;
@@ -2960,6 +2982,15 @@ main > section {
   .skills-section {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .skills-grid {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    scroll-padding-inline: 20px;
   }
 
   .contact-section {
