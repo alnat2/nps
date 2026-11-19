@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Дизайн-система OptimaService: от аудита до внедрения. Кейс UX/UI дизайнера Александра Белоглазкина.">
+    <title>OptimaService — Александр Белоглазкин</title>
+    <link rel="stylesheet" href="style.css?v=20261118-2">
+    <link rel="icon" href="favicon.ico?v=3" sizes="32x32">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=3">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png?v=3">
+</head>
+<body class="scase-page optima-page">
+    <!-- TOPNAV HEADER -->
+    <header id="header" class="header-wrapper">
+        <div class="container top-nav">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.svg" alt="АБ" class="logo-img">
+            </a>
+            
+            <nav class="actions-menu desktop-only">
+                <a href="index.html" class="nav-link" data-token="menu/item4">Главная</a>
+                <a href="works.html" class="nav-link" data-token="menu/item5">Все работы</a>
+                <a href="assets/cv-alexander-beloglazkin.pdf" class="nav-link highlight" target="_blank" data-token="menu/resume">Скачать резюме</a>
+            </nav>
+
+            <div class="contacts">
+                <a href="mailto:alex.beloglazkin@gmail.com" class="contact-item">
+                    <span class="contact-text" data-token="contact/mail-label">Почта</span>
+                    <img src="assets/images/mail.svg" alt="Mail" />
+                </a>
+                <a href="https://t.me/alnat2" class="contact-item" target="_blank">
+                    <span class="contact-text" data-token="contact/telegram-label">Телеграм</span>
+                    <img src="assets/images/telegram.svg" alt="Telegram" />
+                </a>
+            </div>
+
+            <button class="hamburger" aria-label="Открыть меню" aria-controls="mobile-menu" aria-expanded="false">
+                <svg class="menu-icon-animated" width="36" height="29" viewBox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path class="top-line" d="M34.5 1 L1.5 1" stroke="#E1E1E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="middle-line" d="M34.5 14.2 L12.5 14.2" stroke="#E1E1E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path class="bottom-line" d="M27 27.2 L1 27.2" stroke="#E1E1E1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <nav class="mobile-nav">
+            <a href="index.html" class="nav-link" data-token="menu/item4">Главная</a>
+            <a href="works.html" class="nav-link" data-token="menu/item5">Все работы</a>
+            <a href="assets/cv-alexander-beloglazkin.pdf" class="nav-link highlight" target="_blank" data-token="menu/resume">Скачать резюме</a>
+        </nav>
+        <div class="mobile-menu-contacts">
+            <a href="mailto:alex.beloglazkin@gmail.com" class="mobile-menu-contact">
+                <span data-token="contact/mail-label">Почта</span>
+                <img src="assets/images/mail.svg" alt="" aria-hidden="true">
+            </a>
+            <a href="https://t.me/alnat2" class="mobile-menu-contact" target="_blank">
+                <span data-token="contact/telegram-label">Телеграм</span>
+                <img src="assets/images/telegram.svg" alt="" aria-hidden="true">
+            </a>
+        </div>
+    </div>
+
+    <main>
+        <!-- SCASE HERO SECTION -->
+        <section class="scase-hero-section">
+            <div class="container scase-hero-container">
+                <div class="scase-hero-info">
+                    <div class="scase-hero-headers">
+                        <h1 class="scase-hero-title">OptimaService</h1>
+                        <p class="scase-hero-subtitle">Интернет-магазин дорожного оборудования</p>
+                    </div>
+
+                    <article class="case-card case-card-featured scase-banner-card optima-banner-card">
+                        <img src="assets/images/optima-hero-desktop.png" alt="Дизайн-система OptimaService: от аудита до внедрения" class="case-bg case-bg-desktop">
+                        <img src="assets/images/optima-hero-tablet.png" alt="Дизайн-система OptimaService: от аудита до внедрения" class="case-bg case-bg-tablet">
+                        <img src="assets/images/optima-hero-mobile.png" alt="Дизайн-система OptimaService: от аудита до внедрения" class="case-bg case-bg-mobile">
+                        <div class="case-content">
+                            <div class="tags"></div>
+                            <div class="case-text">
+                                <h2>Дизайн-система OptimaService: <br class="desktop-break">от аудита до внедрения</h2>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- SHORT INFO CARD -->
+                    <div class="case-short-info">
+                        <div class="short-info-items">
+                            <div class="informer">
+                                <div class="informer-icon">
+                                    <img src="assets/images/icon-case-role.svg" alt="" aria-hidden="true">
+                                </div>
+                                <span class="informer-title">Дизайнер ДС</span>
+                                <span class="informer-subtitle">Роль в проекте</span>
+                            </div>
+
+                            <a href="https://optimaservis.su" class="informer" target="_blank" rel="noopener noreferrer">
+                                <div class="informer-icon">
+                                    <img src="assets/images/icon-case-link.svg" alt="" aria-hidden="true">
+                                </div>
+                                <span class="informer-title">Optimaservis.su</span>
+                                <span class="informer-subtitle">Сайт проекта</span>
+                            </a>
+
+                            <div class="informer">
+                                <div class="informer-icon">
+                                    <img src="assets/images/icon-case-duration.svg" alt="" aria-hidden="true">
+                                </div>
+                                <span class="informer-title">4 месяца</span>
+                                <span class="informer-subtitle">Длительность проекта</span>
+                            </div>
+
+                            <div class="informer">
+                                <div class="informer-icon">
+                                    <img src="assets/images/icon-case-platform.svg" alt="" aria-hidden="true">
+                                </div>
+                                <span class="informer-title">Web</span>
+                                <span class="informer-subtitle">Платформа</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCASE STORY SECTION -->
+        <section class="scase-story-section optima-story-section">
+            <div class="container scase-story-container">
+                <div class="optima-story">
+                    <!-- HIGHLIGHTERS -->
+                    <div class="optima-highlighters">
+                        <div class="project-highlight highlight-product">
+                            <h2 class="highlight-title">Продукт:</h2>
+                            <div class="highlight-desc">
+                                <p>OptimaService — интернет-магазин дорожного оборудования. На момент начала работы интерфейс уже выглядел готовым, но внутри него не было единой системы. Каждый новый экран собирался из копий старых, а общие изменения приходилось вносить вручную во множестве мест.</p>
+                                <p>В этом кейсе показано, как разрозненные визуальные решения были собраны в дизайн-систему: проведён аудит, цвета и типографика разложены на токены, библиотека компонентов собрана в Figma и реализована в коде.</p>
+                            </div>
+                        </div>
+
+                        <div class="project-highlight highlight-task">
+                            <h2 class="highlight-title">Задача:</h2>
+                            <p class="highlight-desc">Превратить уже разработанные макеты интернет-магазина в согласованную дизайн-систему, синхронизированную с кодом.</p>
+                        </div>
+
+                        <div class="project-highlight highlight-responsibility">
+                            <h2 class="highlight-title">Зона ответственности:</h2>
+                            <div class="highlight-desc">
+                                <ul class="highlight-list">
+                                    <li>
+                                        <span class="highlight-bullet" aria-hidden="true">•</span>
+                                        <span class="highlight-text">Аудит экранов</span>
+                                    </li>
+                                    <li>
+                                        <span class="highlight-bullet" aria-hidden="true">•</span>
+                                        <span class="highlight-text">Библиотека компонентов в Figma</span>
+                                    </li>
+                                    <li>
+                                        <span class="highlight-bullet" aria-hidden="true">•</span>
+                                        <span class="highlight-text">Документация и дизайн-ревью реализации в Storybook</span>
+                                    </li>
+                                </ul>
+                                <p class="highlight-note">Приоритеты системы согласовывались с руководителем дизайн-направления, а правила именования токенов и передача решений в код обсуждались с разработчиками.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- KPI SECTION -->
+                    <div class="kpi-section">
+                        <div class="kpi-card">
+                            <div class="kpi-card-top">
+                                <div class="kpi-icon-wrap">
+                                    <img src="assets/images/icon-kpi-components.svg" alt="" class="kpi-icon" aria-hidden="true">
+                                </div>
+                                <div class="kpi-metric">200+</div>
+                            </div>
+                            <p class="kpi-label">элементов организованы в 110 готовых компонентов и секций</p>
+                        </div>
+
+                        <div class="kpi-card">
+                            <div class="kpi-card-top">
+                                <div class="kpi-icon-wrap">
+                                    <img src="assets/images/icon-kpi-screens.svg" alt="" class="kpi-icon" aria-hidden="true">
+                                </div>
+                                <div class="kpi-metric">40+</div>
+                            </div>
+                            <p class="kpi-label">экранов переведены на дизайн-систему</p>
+                        </div>
+
+                        <div class="kpi-card">
+                            <div class="kpi-card-top">
+                                <div class="kpi-icon-wrap">
+                                    <img src="assets/images/icon-kpi-time.svg" alt="" class="kpi-icon" aria-hidden="true">
+                                </div>
+                                <div class="kpi-metric">15 - 30 мин</div>
+                            </div>
+                            <p class="kpi-label">уходит на сборку нового экрана вместо ≈2 часов</p>
+                        </div>
+                    </div>
+
+                    <!-- CHAPTER 1: КОНТЕКСТ -->
+                    <article class="case-chapter chapter-text-only">
+                        <h2 class="chapter-title">Контекст</h2>
+                        <div class="chapter-content">
+                            <div class="chapter-text">
+                                <p>Что было на старте. Десктопная версия OptimaService была почти завершена, мобильные экраны существовали отдельно, цвета и гарнитура были утверждены. В команде был дизайнер и три разработчика. К началу работы над дизайн-системой проект находился в разработке почти четыре месяца.</p>
+                                <p>В чём была проблема. Системы не было: повторяющиеся элементы рисовались заново на каждом экране, а стили не были организованы. На практике это означало:</p>
+                                <p>одна и та же кнопка или поле ввода выглядели по-разному на разных экранах;</p>
+                                <p>чтобы поменять цвет или шрифт, приходилось вручную проходить по всем макетам;</p>
+                                <p>новый экран собирался из копий старых, и несоответствия переезжали вместе с ними;</p>
+                                <p>в макетах и коде одни и те же элементы назывались по-разному.</p>
+                                <p>Почему задача была нестандартной. Обычно дизайн-систему проектируют до создания экранов или параллельно с ними. Здесь всё было наоборот: готовый интерфейс требовалось разобрать, найти в нём закономерности и на их основе сформировать правила. При этом утверждённые решения нужно было сохранить, а систему выстроить поверх существующих макетов.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- CHAPTER 2: АУДИТ -->
+                    <article class="case-chapter chapter-layout-img-text chapter-audit">
+                        <h2 class="chapter-title">Аудит: от локальных вариантов к 100+ компонентам</h2>
+                        <div class="chapter-content">
+                            <div class="chapter-img-wrap">
+                                <picture>
+                                    <source media="(min-width: 1280px)" srcset="assets/images/optima-audit.png">
+                                    <img src="assets/images/optima-audit-banner.png" alt="Аудит компонентов OptimaService" class="chapter-img">
+                                </picture>
+                            </div>
+                            <div class="chapter-text">
+                                <p>Был проведён аудит более 40 экранов для десктопа и мобильных устройств. В ходе аудита были выявлены повторяющиеся элементы: кнопки, поля, карточки товаров, навигация, текстовые роли, цвета и состояния.</p>
+                                <p>Один из типичных результатов аудита: кнопка существовала в восьми версиях, различавшихся высотой, горизонтальными отступами и радиусом скругления. Только часть вариантов была оформлена как компоненты, остальные дублировались в макетах как отдельные элементы.</p>
+                                <p>Сначала различия проверялись на функциональную необходимость: учитывались роль элемента, контекст использования и состояния. Затем оценивались частотность варианта и сложность поддержки в коде. Если различие не было критичным, его объединяли с базовым вариантом.</p>
+                                <p>Большинство различий между версиями кнопки не меняло её роль и не влияло на сценарий использования. Поэтому такие варианты объединялись.</p>
+                                <p>В ходе аудита были обнаружены многочисленные локальные вариации элементов. После объединения повторяющихся решений и фиксации необходимых различий они были организованы в библиотеку компонентов. По итогам аудита также был определён порядок работы: сначала типографика и цветовые токены, затем компоненты, документация и синхронизация с кодом.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- CHAPTER 3: ТИПОГРАФИКА -->
+                    <article class="case-chapter chapter-layout-text-img">
+                        <h2 class="chapter-title">Типографика, готовая к изменениям</h2>
+                        <div class="chapter-content">
+                            <div class="chapter-text">
+                                <p>Типографика была организована по ролям: четыре уровня заголовков, основной текст, описания и подписи. Для каждой роли были заданы размеры для десктопа, планшета и мобильных устройств, а название гарнитуры вынесено в отдельную переменную Figma.</p>
+                                <p>Эта переменная пригодилась, когда было принято решение заменить шрифт Geologica на Roboto. После замены значения в переменной связанные стили, компоненты и макеты обновились без ручного изменения каждого экрана. Вся замена шрифта на уровне системы заняла около минуты.</p>
+                                <p>Для приведения старых макетов к новой типографической структуре использовался плагин Selection Text. Он позволил массово применить стили к уже существующим слоям.</p>
+                                <p>По той же логике в строковые переменные были вынесены названия категорий каталога. Это позволяло проверять, как длинные названия ведут себя в навигации и других элементах интерфейса, и заранее находить проблемы с переносами и переполнением текста.</p>
+                            </div>
+                            <div class="chapter-img-wrap">
+                                <picture>
+                                    <source media="(min-width: 768px)" srcset="assets/images/optima-typography.png">
+                                    <img src="assets/images/optima-typography-banner.png" alt="Типографика в Figma" class="chapter-img">
+                                </picture>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- CHAPTER 4: ЦВЕТОВЫЕ ТОКЕНЫ -->
+                    <article class="case-chapter chapter-text-only">
+                        <h2 class="chapter-title">Цветовые токены: три слоя</h2>
+                        <div class="chapter-content">
+                            <div class="chapter-text">
+                                <p>В этом разделе описаны цветовые токены. Значения были разложены на три уровня:</p>
+                                <ul class="chapter-list chapter-tokens-list">
+                                    <li><span class="highlight-bullet" aria-hidden="true">•</span> <span>Базовые токены, Primitives: исходные значения палитры, например blue-500</span></li>
+                                    <li><span class="highlight-bullet" aria-hidden="true">•</span> <span>Семантические токены, Semantic: роли в интерфейсе, например text-on-primary, border-error и surface-default</span></li>
+                                    <li><span class="highlight-bullet" aria-hidden="true">•</span> <span>Компонентные токены, Component: привязка роли к конкретному элементу, например button-primary-bg</span></li>
+                                </ul>
+                                <p>Приведённые названия показывают разные уровни токенов, но не образуют одну цепочку: blue-500 — базовое значение, text-on-primary — семантическая роль текста на акцентном фоне, а button-primary-bg — компонентная настройка фона основной кнопки.</p>
+                                <p>Такая структура разделяла исходное значение, его роль в интерфейсе и конкретное применение в компоненте. Семантический токен использовался для общего назначения, а компонентный — для точечной настройки элемента, не затрагивая другие компоненты. Дизайнеры и разработчики работали с ролями и компонентами, а значения хранились в одном месте.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- CHAPTER 5: КОМПОНЕНТЫ -->
+                    <article class="case-chapter chapter-layout-banner">
+                        <h2 class="chapter-title">Компоненты: библиотека для реальной сборки</h2>
+                        <div class="chapter-content">
+                            <div class="chapter-banner-wrap">
+                                <img src="assets/images/optima-components.png" alt="Библиотека компонентов OptimaService" class="chapter-banner-img">
+                            </div>
+                            <div class="chapter-text">
+                                <p>Библиотека включала кнопки, поля ввода, иконки, карточки товаров, элементы навигации и другие базовые компоненты. На их основе были собраны более крупные составные компоненты и готовые секции, что ускорило создание новых макетов. Дизайнер начинал экран с выбора подходящей секции, а не с поиска и копирования старых макетов.</p>
+                                <p>Особенно тщательно прорабатывались ключевые для магазина элементы. Например, для карточки товара были предусмотрены разные группы вариантов и состояний: обычное отображение, отображение скидки со старой ценой и бейджем, состояние «нет в наличии», состояние «в корзине». Для разных сценариев использования разработали два варианта раскладки: «сетка» и «компактная».</p>
+                                <p>Каждый компонент описывался по единому шаблону: фиксировались его назначение, варианты, состояния, правила использования, поведение, адаптивность и связь с токенами. Например:</p>
+                                <p>Button</p>
+                                <p>Назначение: запуск основного или второстепенного действия на экране или в форме.</p>
+                                <p>Варианты: primary, secondary, text-only.</p>
+                                <p>Правила использования: primary используется для главного действия в конкретном контексте, secondary — для дополнительных действий, а text-only — для вспомогательных действий. В одном контексте рекомендуется выделять одно главное действие.</p>
+                                <p>Поведение: ширина зависит от длины текста, но не может быть меньше заданного минимального значения. Текст не обрезается и не выходит за пределы кнопки.</p>
+                                <p>Адаптивность: на мобильных устройствах кнопка может растягиваться на всю ширину контейнера, если это соответствует сценарию использования.</p>
+                                <p>Токены: button-primary-bg, text-on-primary</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- CHAPTER 6: ОТ FIGMA К КОДУ -->
+                    <article class="case-chapter chapter-layout-img-text">
+                        <h2 class="chapter-title">От Figma к коду</h2>
+                        <div class="chapter-content">
+                            <div class="chapter-img-wrap">
+                                <picture>
+                                    <source media="(min-width: 768px)" srcset="assets/images/optima-code.png">
+                                    <img src="assets/images/optima-code-banner.png" alt="Синхронизация Figma и кода" class="chapter-img">
+                                </picture>
+                            </div>
+                            <div class="chapter-text">
+                                <p>Значения дизайн-токенов хранились в Figma Variables. Обновление проходило в несколько шагов: значение меняли в Figma, плагин повторно экспортировал данные в JSON, а команда разработки преобразовывала обновлённый файл в CSS-переменные и применяла изменения в проекте. Такой процесс заменял ручной поиск и переписывание отдельных значений.</p>
+                                <p>Связь между дизайном и кодом выглядела так:</p>
+                                <p>Figma Variables → JSON → CSS-переменные → компоненты в Storybook</p>
+                                <p>Отдельно с разработчиками были согласованы правила именования токенов. Это заняло несколько итераций, зато в дизайне и коде появился единый словарь: названия переменных в Figma соответствовали названиям переменных в CSS.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- CHAPTER 7: STORYBOOK -->
+                    <article class="case-chapter chapter-layout-text-img">
+                        <h2 class="chapter-title">Storybook: дизайн-ревью реализации</h2>
+                        <div class="chapter-content">
+                            <div class="chapter-text">
+                                <p>Разработчики переносили компоненты в Storybook, где их можно было проверить отдельно от конкретных страниц и сценариев. На этом этапе проводилось дизайн-ревью реализации: состояния и варианты компонентов сверялись с макетами, проверялись значения токенов и типографика. Это помогало находить не только очевидные визуальные ошибки, но и расхождения, которые при сборке готового экрана остаются незаметными.</p>
+                                <p>Изолированный компонент показывает такие отклонения лучше, чем готовая страница. Например, в поле ввода состояние error перекрашивало только рамку, а текст подсказки оставался серым. Кроме того, отступ между полем и подсказкой составлял 4 px вместо 8. На готовой странице эти детали могли потеряться среди других элементов, а в Storybook каждое состояние отображалось отдельно и позволяло точно сопоставить реализацию с макетом.</p>
+                                <p>Так Storybook использовался не только как каталог компонентов для разработки, но и как инструмент контроля качества. Он помогал проверять, что внешний вид и набор состояний компонента согласованы во всех вариантах, а решения, принятые в дизайн-системе, одинаково отражаются в Figma и коде.</p>
+                            </div>
+                            <div class="chapter-img-wrap">
+                                <picture>
+                                    <source media="(min-width: 768px)" srcset="assets/images/optima-storybook.png">
+                                    <img src="assets/images/optima-storybook-banner.png" alt="Storybook дизайн-ревью" class="chapter-img">
+                                </picture>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- CHAPTER 8: МИГРАЦИЯ -->
+                    <article class="case-chapter chapter-text-only">
+                        <h2 class="chapter-title">Миграция</h2>
+                        <div class="chapter-content">
+                            <div class="chapter-text">
+                                <p>После завершения библиотеки существующие экраны в Figma переводились на компоненты дизайн-системы вручную, экран за экраном. На каждом экране локальные кнопки, поля, карточки и другие элементы заменялись соответствующими компонентами из библиотеки, а их размеры, отступы, типографика и состояния приводились к единым системным значениям.</p>
+                                <p>Если экран содержал решение, связанное с особым сценарием, его сохраняли как отдельный вариант. Например, компактная карточка товара оставалась отдельной раскладкой, поскольку стандартная карточка каталога занимала много места в горизонтальном положении. Всего в Figma на компоненты дизайн-системы перевели 40+ экранов. В рамках этого этапа миграция касалась макетов в Figma, а перенос этих экранов на компоненты в существующем коде отдельно не оценивался.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- CHAPTER 9: РЕЗУЛЬТАТЫ -->
+                    <article class="case-chapter chapter-text-only">
+                        <h2 class="chapter-title">Результаты</h2>
+                        <div class="chapter-content">
+                            <div class="chapter-text">
+                                <p>В зависимости от сложности макета сборка нового экрана в Figma занимала от 15 до 30 минут вместо примерно двух часов.</p>
+                                <p>Изменения в ключевых параметрах интерфейса, например в гарнитуре или цвете основных действий, теперь вносились через переменные и распространялись на связанные стили, компоненты и макеты.</p>
+                                <p>Команды дизайна и разработки использовали единый словарь. Названия токенов и вариантов совпадали в Figma и коде.</p>
+                                <p>После миграции в Figma в макетах каталога стало меньше расхождений между однотипными элементами.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- CHAPTER 10: АКТУАЛЬНОСТЬ ПОДХОДА СЕГОДНЯ -->
+                    <article class="case-chapter chapter-text-only">
+                        <h2 class="chapter-title">Актуальность подхода сегодня</h2>
+                        <div class="chapter-content">
+                            <div class="chapter-text">
+                                <p>На текущий момент многие задачи из этого проекта можно было бы решить быстрее благодаря развитию ИИ-агентов. Например, начальный аудит компонентов — выявление всех вариантов кнопок, полей и карточек на 40 экранах — теперь можно частично автоматизировать: агент анализирует макеты, группирует визуально похожие элементы и предлагает структуру токенов на основе найденных закономерностей. Миграцию экранов на компоненты библиотеки тоже можно ускорить: агент находит локальные элементы, сопоставляет их с компонентами из системы и предлагает замены, оставляя дизайнеру только проверку и утверждение. Это не отменяет необходимость принимать решения о структуре системы и проверять результат, но снижает долю рутинной работы и позволяет сосредоточиться на согласованности правил и качестве реализации.</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER / CONTACTS -->
+    <footer id="contact" class="contact-section">
+        <img src="assets/images/contact-glowing.svg" alt="" class="contact-glowing" aria-hidden="true">
+        <img src="assets/images/texturegroup.svg" alt="" class="contact-texture" aria-hidden="true">
+        <div class="contact-content">
+            <div class="contact-left">
+                <h2 data-token="cta/title">Открыт к предложениям</h2>
+                <p data-token="cta/description">Рассматриваю постоянную работу в команде. Буду рад обсудить роль, задачи и то, как могу быть полезен.</p>
+            </div>
+            <div class="contact-right">
+                <h3 data-token="contacts/title">Контакты</h3>
+                <div class="contact-list">
+                    <div class="contact-list-item">
+                        <span data-token="email/label">Email</span>
+                        <a href="mailto:alex.beloglazkin@gmail.com" data-token="email/value">alex.beloglazkin@gmail.com</a>
+                    </div>
+                    <div class="contact-list-item">
+                        <span data-token="telegram/label">Telegram</span>
+                        <a href="https://t.me/alnat2" target="_blank" data-token="telegram/value">@alnat2</a>
+                    </div>
+                    <div class="contact-list-item">
+                        <span data-token="phone/label">Телефон</span>
+                        <a href="tel:+79202809962" data-token="phone/value">+7 (920) 280-99-62</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span data-token="copyright"><span class="footer-copy-name">© 2026 Александр Белоглазкин</span><span class="footer-copy-role"> — UX/UI дизайнер</span></span>
+            <nav class="footer-nav">
+                <a href="works.html" data-token="menu/item1">Работы</a>
+                <a href="index.html#experience" data-token="menu/item2">Опыт</a>
+                <a href="index.html#skills" data-token="menu/item3">Навыки</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
