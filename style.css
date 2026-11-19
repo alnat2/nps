@@ -3047,7 +3047,7 @@ main > section {
   /* Optima Case Mobile */
   .optima-story {
     width: 100%;
-    max-width: 328px;
+    max-width: none;
     gap: 40px;
   }
 
@@ -3074,6 +3074,7 @@ main > section {
     margin-right: -16px;
     padding-left: 16px;
     padding-right: 16px;
+    scroll-padding-inline: 16px;
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x proximity;
@@ -3486,7 +3487,8 @@ main > section {
     padding-right: 20px;
   }
 
-  .skills-grid {
+  .skills-grid,
+  .optima-page .kpi-section {
     width: calc(100% + 40px);
     margin-left: -20px;
     margin-right: -20px;
